@@ -4,7 +4,7 @@ steps:
     entrypoint: 'sh'
     args:
       - '-c'
-      - 'npm ci && npm run lint && npm test && npm run build'
+      - 'npm install && npm run lint && npm test && npm run build'
 
   # 2. Build container image
   - name: 'gcr.io/cloud-builders/docker'

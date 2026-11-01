@@ -3,7 +3,6 @@ import express, { Express, Response, NextFunction } from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { GoogleGenAI } from '@google/genai';
 import { getDefaultGeminiClient, ResearchLruCache } from './gemini';
 import {
@@ -16,9 +15,6 @@ import {
   TokenVerifier,
 } from './middleware';
 import { registerApiRoutes } from './routes';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export const PORT =
   process.env.NODE_ENV === 'production' ? Number(process.env.PORT) || 8080 : 3000;
@@ -130,24 +126,13 @@ export async function createApp(options: CreateAppOptions = {}): Promise<Express
     Boolean(process.env.VITEST) ||
     Boolean(process.env.NETLIFY) ||
     Boolean(process.env.AWS_LAMBDA_FUNCTION_NAME);
-  const shouldMountStaticOrVite = options.enableViteMiddleware ?? !isTestOrServerless;
-  if (shouldMountStaticOrVite) {
-    if (process.env.NODE_ENV !== 'production') {
-      const { createServer: createViteServer } = await import('vite');
-      const vite = await createViteServer({
-        server: { middlewareMode: true },
-        appType: 'spa',
-      });
-      app.use(vite.middlewares);
-    } else {
-      const rootDir = __dirname.endsWith('dist')
-        ? __dirname
-        : path.resolve(__dirname, '../../dist');
-      app.use(express.static(rootDir));
-      app.get('*', (_req, res) => {
-        res.sendFile(path.join(rootDir, 'index.html'));
-      });
-    }
+  const shouldMountStatic = options.enableViteMiddleware ?? !isTestOrServerless;
+  if (shouldMountStatic && process.env.NODE_ENV === 'production') {
+    const rootDir = path.resolve(process.cwd(), 'dist');
+    app.use(express.static(rootDir));
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(rootDir, 'index.html'));
+    });
   }
 
   return app;

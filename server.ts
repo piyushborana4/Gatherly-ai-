@@ -29,15 +29,27 @@ export {
 };
 export type { CreateAppOptions, AuthenticatedRequest, TokenVerifier };
 
-if (process.env.NODE_ENV !== 'test' && !process.env.VITEST) {
-  createApp()
-    .then((app) => {
-      app.listen(PORT, '0.0.0.0', () => {
-        console.log(`Gatherly AI server running on http://0.0.0.0:${PORT}`);
-      });
-    })
-    .catch((err) => {
-      console.error('Failed to start Gatherly AI server:', err);
-      process.exit(1);
+async function startServer(): Promise<void> {
+  const app = await createApp();
+
+  if (process.env.NODE_ENV !== 'production') {
+    const vitePkg = 'vite';
+    const { createServer: createViteServer } = (await import(vitePkg)) as typeof import('vite');
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: 'spa',
     });
+    app.use(vite.middlewares);
+  }
+
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Gatherly AI server running on http://0.0.0.0:${PORT}`);
+  });
+}
+
+if (process.env.NODE_ENV !== 'test' && !process.env.VITEST) {
+  startServer().catch((err) => {
+    console.error('Failed to start Gatherly AI server:', err);
+    process.exit(1);
+  });
 }
