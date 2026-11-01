@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Gatherly AI — Luxury Editorial Event Intelligence</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "ivory": "#F8F5EF",
+            "ivory-light": "#FAF2ED",
+            "ivory-sand": "#EDE5D8",
+            "charcoal": "#282522",
+            "charcoal-muted": "#57423D",
+            "burgundy": "#542D38",
+            "burgundy-deep": "#3A1A22",
+            "terracotta": "#B84B32",
+            "terracotta-rich": "#98341D",
+            "sage": "#899681",
+            "sage-dark": "#4C5946",
+            "gold": "#C6A364",
+            "gold-light": "#E9D8B4",
+            "gold-dark": "#9E7A38",
+            
+            // Design token aliases mapped to the requested palette
+            "surface": "#F8F5EF",
+            "surface-dim": "#EDE5D8",
+            "surface-container": "#F4ECE7",
+            "surface-container-low": "#FAF2ED",
+            "surface-container-high": "#EEE7E2",
+            "surface-container-highest": "#E8E1DC",
+            "surface-container-lowest": "#FFFFFF",
+            "on-surface": "#282522",
+            "on-surface-variant": "#57423D",
+            "primary": "#B84B32",
+            "primary-container": "#98341D",
+            "on-primary": "#FFFFFF",
+            "secondary": "#542D38",
+            "tertiary": "#4C5946",
+            "tertiary-fixed": "#D9E7CF",
+            "outline": "#8A716C",
+            "outline-variant": "#DEC0B9",
+            "inverse-surface": "#282522",
+            "inverse-on-surface": "#F8F5EF"
+          },
+          fontFamily: {
+            "serif-display": ["'Newsreader'", "'DM Serif Display'", "serif"],
+            "headline-lg": ["'Newsreader'", "'DM Serif Display'", "serif"],
+            "headline-md": ["'Newsreader'", "serif"],
+            "headline-sm": ["'Newsreader'", "serif"],
+            "body-sans": ["'Manrope'", "sans-serif"],
+            "body-lg": ["'Manrope'", "sans-serif"],
+            "body-md": ["'Manrope'", "sans-serif"],
+            "body-sm": ["'Manrope'", "sans-serif"],
+            "currency-numeral": ["'Manrope'", "sans-serif"]
+          },
+          boxShadow: {
+            "luxury": "0 20px 45px -15px rgba(40, 37, 34, 0.12), 0 0 0 1px rgba(198, 163, 100, 0.2)",
+            "luxury-deep": "0 30px 60px -20px rgba(58, 26, 34, 0.35)",
+            "glass": "0 8px 32px 0 rgba(40, 37, 34, 0.08)"
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        background-color: #F8F5EF;
+        color: #282522;
+        font-family: 'Manrope', sans-serif;
+        scroll-behavior: smooth;
+      }
+    }
+    .gold-shimmer {
+      background: linear-gradient(135deg, #FAF2ED 0%, #F5ECE0 50%, #FAF2ED 100%);
+      border: 1px solid rgba(198, 163, 100, 0.35);
+    }
+    .subtle-border {
+      border: 1px solid rgba(138, 113, 108, 0.18);
+    }
+  </style>
+</head>
+<body class="bg-[#F8F5EF] text-[#282522] antialiased selection:bg-terracotta/20 selection:text-burgundy">
+<!-- 1. STICKY FROSTED LUXURY HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#F8F5EF]/85 backdrop-blur-xl border-b border-[#C6A364]/25 shadow-sm transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
+<!-- Brand Monogram & Logo -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-10 h-10 rounded-full bg-[#542D38] border border-[#C6A364] flex items-center justify-center text-[#F8F5EF] shadow-sm group-hover:scale-105 transition-transform">
+<span class="font-serif-display text-xl font-normal italic">G</span>
+</div>
+<div class="flex flex-col">
+<span class="font-serif-display text-2xl font-normal tracking-tight text-[#282522] leading-none">Gatherly <span class="text-terracotta italic">AI</span></span>
+<span class="font-body-sans text-[9px] uppercase tracking-[0.25em] text-[#C6A364] font-semibold mt-1">Editorial Event Tech</span>
+</div>
+</a>
+<!-- Refined Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium text-[#57423D] hover:text-[#B84B32] transition-colors" href="#occasions">Occasions</a>
+<a class="text-sm font-medium text-[#57423D] hover:text-[#B84B32] transition-colors flex items-center gap-1.5" href="#command-center">
+<span>Gemini Copilot</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] uppercase tracking-wider bg-terracotta/10 text-terracotta font-semibold">Live</span>
+</a>
+<a class="text-sm font-medium text-[#57423D] hover:text-[#B84B32] transition-colors" href="#scenography">Curated Venues</a>
+<a class="text-sm font-medium text-[#57423D] hover:text-[#B84B32] transition-colors" href="#archive">Editorial Archive</a>
+<a class="text-sm font-medium text-[#57423D] hover:text-[#B84B32] transition-colors" href="#how-it-works">Pricing &amp; Concierge</a>
+</nav>
+<!-- Currency Selector + Primary Action -->
+<div class="flex items-center gap-4">
+<!-- Currency Pill -->
+<div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#EDE5D8]/70 border border-[#C6A364]/30 text-xs font-semibold text-[#282522]">
+<span class="text-[#B84B32] font-bold">₹</span>
+<span>INR</span>
+<span class="material-symbols-outlined text-xs text-[#57423D]">expand_more</span>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#542D38] text-[#F8F5EF] border border-[#C6A364]/50 hover:bg-[#B84B32] text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5" href="#command-center">
+<span>Plan Your Celebration</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20">
+<!-- 2. DRAMATIC IMAGE-LED CINEMATIC HERO -->
+<section class="relative w-full overflow-hidden bg-[#FAF2ED] pt-10 pb-20 border-b border-[#EDE5D8]">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Hero Editorial Header -->
+<div class="max-w-4xl mx-auto text-center mb-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EDE5D8] border border-[#C6A364]/40 text-[#542D38] text-xs font-semibold uppercase tracking-[0.18em] mb-5 shadow-sm">
+<span class="material-symbols-outlined text-sm text-[#B84B32]">hotel_class</span>
+<span>Where Grand Traditions Meet Modern Intelligence</span>
+</div>
+<h1 class="font-serif-display text-4xl sm:text-6xl lg:text-7xl font-normal text-[#282522] tracking-tight leading-[1.1]">
+            Big celebrations. <br/>
+<span class="italic font-serif-display text-[#B84B32]">Breathtakingly orchestrated.</span>
+</h1>
+<p class="font-body-sans text-base sm:text-lg text-[#57423D] mt-5 max-w-2xl mx-auto font-light leading-relaxed">
+            The premier editorial event intelligence platform for India’s landmark weddings and milestone galas. Synthesize multi-day run-of-shows, allocate crores with escrow precision, and negotiate heritage riders with Gemini Copilot.
+          </p>
+</div>
+<!-- Grand Asymmetric Hero Stage with Image & Layered Intelligence Cards -->
+<div class="relative w-full rounded-3xl overflow-hidden shadow-luxury border border-[#C6A364]/30 bg-[#282522]">
+<!-- Hero Palace Image -->
+<div class="relative w-full h-[580px] sm:h-[660px] lg:h-[720px] overflow-hidden">
+<img alt="Dramatic ultra luxury Indian wedding reception hero composition, majestic heritage palace courtyard in Udaipur at twilight" class="w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out brightness-[0.93]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCEfkwx0b7Trbf__OR3UEt7zpWN6XgwHpU41ushoJx4Bv-BIzI44zJbzEK95uSsSJtelg2xXMiBPE0SyVq7pmHXeJmdna6tmt71Kck4rn2rY55K-Ku-SOtu64-aT1ZTQxoUxfNX9gMCP_LtXXupSd6v_EaIBAghplfWh8w7KWeTvayox5prkkr6oxMUErezCl40FMzzXkp0trS5hopU27IH8VA8TsLVYqShD3S7TY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#282522]/95 via-transparent to-black/30 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#542D38]/40 via-transparent to-transparent pointer-events-none"></div>
+<!-- Image Watermark / Location Tag -->
+<div class="absolute bottom-6 left-8 hidden sm:flex items-center gap-3 text-[#F8F5EF]/90 z-20">
+<span class="p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+<span class="material-symbols-outlined text-base">location_on</span>
+</span>
+<div>
+<p class="font-serif-display text-lg italic text-[#FAF2ED]">City Palace · Udaipur</p>
+<p class="text-[11px] uppercase tracking-widest text-[#E9D8B4]">The Imperial 3-Day Royal Gala</p>
+</div>
+</div>
+</div>
+<!-- FLOATING SAAS INTELLIGENCE OVERLAYS (Ultra-luxury Glassmorphic) -->
+<!-- Card 1: Master Budget Liquidity Card (Top Left) -->
+<div class="absolute top-6 left-6 sm:top-8 sm:left-8 z-30 max-w-xs sm:max-w-sm w-full bg-[#FAF2ED]/95 backdrop-blur-xl p-5 rounded-2xl border border-[#C6A364]/40 shadow-luxury transition-all hover:-translate-y-1">
+<div class="flex items-center justify-between mb-3">
+<span class="text-[10px] uppercase font-bold tracking-[0.16em] text-[#57423D] flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#899681] animate-pulse"></span>
+                Master Ledger · Multi-Day
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-[#899681]/15 text-[#4C5946] text-[11px] font-semibold border border-[#899681]/30">62% Liquidity</span>
+</div>
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-serif-display text-2xl sm:text-3xl text-[#282522]">₹12,00,000</span>
+<span class="text-xs text-[#57423D]">₹7,50,000 Uncommitted</span>
+</div>
+<!-- Dual Progress Bar -->
+<div class="w-full bg-[#EDE5D8] h-2 rounded-full overflow-hidden flex my-2.5">
+<div class="bg-[#B84B32] h-full" style="width: 38%"></div>
+<div class="bg-[#542D38] h-full" style="width: 24%"></div>
+<div class="bg-[#899681] h-full" style="width: 38%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-[#57423D] font-medium">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#B84B32]"></span> Disbursed ₹4.5L</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#542D38]"></span> Escrow Locked</span>
+<span class="text-[#4C5946] font-semibold">Zero Overruns</span>
+</div>
+</div>
+<!-- Card 2: Google Gemini Intelligence Card (Bottom Right) -->
+<div class="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-30 max-w-sm sm:max-w-md w-full bg-[#FAF2ED]/95 backdrop-blur-xl p-5 rounded-2xl border border-[#C6A364]/40 shadow-luxury transition-all hover:-translate-y-1">
+<div class="flex items-center gap-2.5 mb-2.5 text-[#B84B32]">
+<div class="w-7 h-7 rounded-lg bg-[#B84B32]/10 border border-[#B84B32]/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-base">psychology</span>
+</div>
+<span class="text-xs uppercase tracking-wider font-bold">Google Gemini Copilot Intelligence</span>
+</div>
+<p class="font-serif-display text-base text-[#282522] italic leading-snug">
+              “Negotiated Taj Lake Palace banquet rider: Clause 14.2 adjusted. Successfully saved <span class="text-[#B84B32] font-semibold not-italic">₹1,45,000</span> on sound curfew surcharges.”
+            </p>
+<div class="mt-3 pt-3 border-t border-[#EDE5D8] flex items-center justify-between text-xs">
+<span class="text-[#57423D] flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#899681]">verified</span> SLA Verified in Hindi &amp; English
+              </span>
+<button class="text-[#B84B32] font-semibold hover:underline flex items-center gap-0.5">
+<span>View Rider</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Live WhatsApp RSVP Chip (Top Right) -->
+<div class="absolute top-6 right-6 sm:top-8 sm:right-8 z-30 hidden sm:flex items-center gap-3 bg-[#282522]/90 backdrop-blur-md px-4 py-2.5 rounded-full border border-[#C6A364]/40 text-[#F8F5EF] shadow-lg">
+<span class="material-symbols-outlined text-emerald-400 text-lg">chat</span>
+<div class="text-xs">
+<span class="font-bold text-[#FAF2ED]">320 of 350 Royal Guests Confirmed</span>
+<span class="text-[#E9D8B4] ml-1.5 opacity-80">· via WhatsApp Concierge</span>
+</div>
+</div>
+<!-- Card 4: Multi-Day Timeline Pill (Bottom Left, visible above watermark on mobile/desktop) -->
+<div class="absolute bottom-28 left-6 sm:bottom-24 sm:left-8 z-30 flex items-center gap-3 bg-[#542D38]/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-[#C6A364]/40 text-[#FAF2ED] shadow-lg">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E9D8B4] animate-ping"></span>
+<div>
+<p class="text-xs font-semibold">Day 2: Royal Sangeet &amp; Sufi Night</p>
+<p class="text-[11px] text-[#E9D8B4]/80">Artist soundcheck scheduled at 17:00 IST</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. INTERACTIVE OCCASION ARCHETYPE BAR -->
+<section class="w-full bg-[#EDE5D8]/60 border-b border-[#C6A364]/25 py-5 sticky top-20 z-40 backdrop-blur-md" id="occasions">
+<div class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 text-xs uppercase font-bold tracking-wider text-[#57423D] shrink-0">
+<span class="material-symbols-outlined text-[#B84B32] text-base">auto_fix_high</span>
+<span>Occasions Orchestrated:</span>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<!-- Active Pill -->
+<button class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#542D38] text-[#F8F5EF] border border-[#C6A364] shadow-sm text-xs font-medium transition-all">
+<span class="w-2 h-2 rounded-full bg-[#C6A364]"></span>
+<span class="font-serif-display text-sm font-normal">Royal Destination Weddings</span>
+<span class="px-2 py-0.5 rounded-full bg-[#C6A364]/30 text-[#FAF2ED] text-[10px] font-bold">840+</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FAF2ED] text-[#282522] border border-[#EDE5D8] hover:border-[#C6A364] text-xs font-medium transition-all">
+<span class="font-serif-display text-sm font-normal">Milestone Jubilees &amp; Birthdays</span>
+<span class="px-2 py-0.5 rounded-full bg-[#EDE5D8] text-[#57423D] text-[10px] font-bold">420+</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FAF2ED] text-[#282522] border border-[#EDE5D8] hover:border-[#C6A364] text-xs font-medium transition-all">
+<span class="font-serif-display text-sm font-normal">Heritage Galas &amp; Fundraisers</span>
+<span class="px-2 py-0.5 rounded-full bg-[#EDE5D8] text-[#57423D] text-[10px] font-bold">190+</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FAF2ED] text-[#282522] border border-[#EDE5D8] hover:border-[#C6A364] text-xs font-medium transition-all">
+<span class="font-serif-display text-sm font-normal">Private Soirées &amp; High Teas</span>
+<span class="px-2 py-0.5 rounded-full bg-[#EDE5D8] text-[#57423D] text-[10px] font-bold">310+</span>
+</button>
+<button class="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FAF2ED] text-[#282522] border border-[#EDE5D8] hover:border-[#C6A364] text-xs font-medium transition-all">
+<span class="font-serif-display text-sm font-normal">Curated Sangeet Showcases</span>
+<span class="px-2 py-0.5 rounded-full bg-[#EDE5D8] text-[#57423D] text-[10px] font-bold">640+</span>
+</button>
+</div>
+<a class="text-xs text-[#B84B32] font-semibold hover:underline shrink-0 flex items-center gap-0.5" href="#command-center">
+<span>Explore All 18 Archetypes</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 4. ASYMMETRIC EDITORIAL WORKSPACE PREVIEW ("The Master Command Center") -->
+<section class="w-full py-24 bg-[#F8F5EF] border-b border-[#EDE5D8]" id="command-center">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Editorial Narrative -->
+<div class="lg:col-span-5 flex flex-col justify-center lg:sticky lg:top-36">
+<div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-bold text-[#B84B32] mb-3">
+<span class="w-5 h-px bg-[#B84B32]"></span>
+<span>The Master Command Center</span>
+</div>
+<h2 class="font-serif-display text-3xl sm:text-5xl font-normal text-[#282522] tracking-tight leading-[1.15]">
+              Executive intelligence for multi-crore Indian celebrations.
+            </h2>
+<p class="font-body-sans text-base text-[#57423D] mt-6 leading-relaxed">
+              No generic spreadsheets or frantic group chats. Gatherly operates as an architectural command post, binding vendor escrow contracts, WhatsApp concierge workflows, and multi-ceremony muhurat schedules into one harmonious ecosystem.
+            </p>
+<!-- Feature Pillar Callouts -->
+<div class="mt-8 space-y-4">
+<div class="p-4 rounded-xl bg-[#FAF2ED] border border-[#C6A364]/30 flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-[#542D38] text-[#F8F5EF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">contract_edit</span>
+</div>
+<div>
+<h4 class="font-serif-display text-lg text-[#282522]">Gemini Automated Vendor Contracts</h4>
+<p class="text-xs text-[#57423D] mt-1 leading-normal">Scans 40+ page hotel RFPs in seconds. Flags unstated electricity generators, liquor corkage, and overtime surcharges before you sign.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-[#FAF2ED] border border-[#C6A364]/30 flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-[#B84B32] text-[#F8F5EF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="font-serif-display text-lg text-[#282522]">Escrow Release Milestones (INR ₹)</h4>
+<p class="text-xs text-[#57423D] mt-1 leading-normal">Tokens disbursed only when family captains verify stage delivery and mandap flower readiness via photo verification.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-[#FAF2ED] border border-[#C6A364]/30 flex items-start gap-4">
+<div class="w-9 h-9 rounded-full bg-[#4C5946] text-[#F8F5EF] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-lg">family_restroom</span>
+</div>
+<div>
+<h4 class="font-serif-display text-lg text-[#282522]">Family RSVP Captains &amp; Suite Allotment</h4>
+<p class="text-xs text-[#57423D] mt-1 leading-normal">Segregate airport transfers and palace wings for bride &amp; groom sides with automated bilingual Hindi-English concierge pings.</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#282522] text-[#F8F5EF] text-xs font-semibold uppercase tracking-wider hover:bg-[#B84B32] transition-colors shadow-md" href="#">
+<span>Request Concierge Walkthrough</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right: Layered Executive Workspace UI -->
+<div class="lg:col-span-7 bg-[#FAF2ED] rounded-3xl p-6 sm:p-8 border border-[#C6A364]/40 shadow-luxury space-y-6">
+<!-- Browser Chrome Window Top Bar -->
+<div class="flex items-center justify-between pb-4 border-b border-[#EDE5D8]">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#B84B32]/70"></span>
+<span class="w-3 h-3 rounded-full bg-[#C6A364]/70"></span>
+<span class="w-3 h-3 rounded-full bg-[#899681]/70"></span>
+<span class="ml-3 font-mono text-xs text-[#57423D]">workspace.gatherly.ai/the-oberoi-udaipur</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#899681]/20 text-[#4C5946] text-[10px] font-bold uppercase tracking-wider">Escrow Synchronized</span>
+<div class="w-7 h-7 rounded-full bg-[#542D38] text-[#F8F5EF] flex items-center justify-center text-xs font-bold font-serif-display">SK</div>
+</div>
+</div>
+<!-- Event Workspace Title Banner -->
+<div class="p-5 rounded-2xl bg-gradient-to-r from-[#542D38] to-[#3A1A22] text-[#F8F5EF] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-md">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#E9D8B4]">Active Royal Workspace</span>
+<h3 class="font-serif-display text-2xl text-[#FAF2ED] mt-0.5">The Oberoi Udaivilās Celebration</h3>
+<p class="text-xs text-[#F8F5EF]/80 font-light mt-1">3-Day Royal Gala · 320 Guests · ₹12,00,000 Master Budget</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1.5 rounded-full bg-[#FAF2ED]/10 backdrop-blur-md border border-white/20 text-xs text-[#FAF2ED]">
+                  Dec 18–20, 2026
+                </span>
+</div>
+</div>
+<!-- Subcard 1: Budget Allocation Ledger Matrix -->
+<div class="bg-[#F8F5EF] p-5 rounded-2xl border border-[#EDE5D8] shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h4 class="font-serif-display text-lg text-[#282522]">Allocated Capital Matrix</h4>
+<p class="text-xs text-[#57423D]">Real-time milestone tracking with automated GST invoicing</p>
+</div>
+<span class="font-serif-display text-xl text-[#B84B32]">₹12,00,000 Total</span>
+</div>
+<!-- Breakdown Rows -->
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-xs font-medium text-[#282522] mb-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-[#542D38]"></span>
+                      Bespoke Royal Catering (3-Day Banquet)
+                    </span>
+<span class="font-bold">₹4,80,000 (40%)</span>
+</div>
+<div class="w-full bg-[#EDE5D8] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#542D38] h-full" style="width: 40%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-medium text-[#282522] mb-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-[#B84B32]"></span>
+                      Floral Scenography &amp; Mandap Architecture
+                    </span>
+<span class="font-bold">₹3,20,000 (26.6%)</span>
+</div>
+<div class="w-full bg-[#EDE5D8] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#B84B32] h-full" style="width: 26.6%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-medium text-[#282522] mb-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-[#C6A364]"></span>
+                      Heritage Cinema &amp; Editorial Photography
+                    </span>
+<span class="font-bold">₹2,10,000 (17.5%)</span>
+</div>
+<div class="w-full bg-[#EDE5D8] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#C6A364] h-full" style="width: 17.5%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-medium text-[#282522] mb-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-[#899681]"></span>
+                      Curated Entertainment &amp; Sufi Troupe
+                    </span>
+<span class="font-bold">₹1,90,000 (15.9%)</span>
+</div>
+<div class="w-full bg-[#EDE5D8] h-1.5 rounded-full overflow-hidden">
+<div class="bg-[#899681] h-full" style="width: 15.9%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subcard 2: WhatsApp Gemini Copilot Live Feed -->
+<div class="bg-[#F8F5EF] p-5 rounded-2xl border border-[#EDE5D8] shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-[#EDE5D8] mb-3">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-sm">forum</span>
+</div>
+<span class="font-serif-display text-sm text-[#282522]">Concierge WhatsApp Chat with Gemini Copilot</span>
+</div>
+<span class="text-[10px] text-[#57423D] bg-emerald-100 px-2 py-0.5 rounded-full text-emerald-800 font-semibold">Active Session</span>
+</div>
+<!-- Chat Stream -->
+<div class="space-y-3 text-xs">
+<!-- User Msg -->
+<div class="bg-[#EDE5D8]/70 p-3 rounded-xl rounded-tl-none max-w-md">
+<p class="font-semibold text-[#542D38]">Family Host (Anand Sharma):</p>
+<p class="text-[#282522] mt-0.5">“Gemini, 42 elders requested strict Jain catering for High Tea on Day 1. Also need 3 live hot jalebi counters.”</p>
+</div>
+<!-- Gemini Response -->
+<div class="bg-[#542D38]/10 border border-[#542D38]/20 p-3 rounded-xl rounded-tr-none ml-auto max-w-md">
+<p class="font-bold text-[#B84B32] flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">psychology</span> Gemini Concierge:
+                  </p>
+<p class="text-[#282522] mt-0.5">
+                    “Updated catering rider sent to Executive Chef Vikram. 42 Jain covers isolated at Pavilion B; 3 live counter gas permits approved. Surcharge offset by ₹18,000 using unused high tea mocktail budget.”
+                  </p>
+<div class="mt-2 flex gap-2">
+<span class="px-2 py-0.5 rounded bg-[#FAF2ED] text-[10px] text-[#4C5946] border border-[#899681]/40 font-semibold">✓ Chef Acknowledged</span>
+<span class="px-2 py-0.5 rounded bg-[#FAF2ED] text-[10px] text-[#B84B32] border border-[#B84B32]/30 font-semibold">✓ Budget Updated</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subcard 3: Minute-by-Minute Run of Show Execution -->
+<div class="bg-[#F8F5EF] p-5 rounded-2xl border border-[#EDE5D8] shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="font-serif-display text-base text-[#282522]">Day-of Precision Call Sheet · Pheras</span>
+<span class="text-xs text-[#B84B32] font-semibold bg-[#B84B32]/10 px-2.5 py-0.5 rounded-full">Day 3 · Muhurat 18:14 IST</span>
+</div>
+<div class="space-y-2.5">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-[#FAF2ED] border-l-4 border-[#899681] text-xs">
+<div>
+<span class="font-bold text-[#282522]">16:30 IST</span> — Royal Baraat Assembly &amp; Vintage Packard Ignition
+                    <p class="text-[11px] text-[#57423D]">Dhol masters checked; Toran gate hospitality captains in place.</p>
+</div>
+<span class="text-[10px] font-bold text-[#4C5946] bg-[#899681]/20 px-2 py-0.5 rounded">Ready</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-[#FAF2ED] border-l-4 border-[#B84B32] text-xs">
+<div>
+<span class="font-bold text-[#282522]">17:45 IST</span> — Varmala on Lake Deck under Floating Fireworks
+                    <p class="text-[11px] text-[#57423D]">Cold pyros safety permit confirmed; Drone operators calibrated.</p>
+</div>
+<span class="text-[10px] font-bold text-[#B84B32] bg-[#B84B32]/15 px-2 py-0.5 rounded">Cued</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. VISUAL STORYTELLING & ASYMMETRIC EDITORIAL TILES -->
+<section class="w-full py-24 bg-[#FAF2ED] border-b border-[#EDE5D8]" id="scenography">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="text-xs uppercase tracking-[0.25em] font-bold text-[#C6A364]">Visual Storytelling &amp; Execution</span>
+<h2 class="font-serif-display text-4xl sm:text-5xl font-normal text-[#282522] mt-3">
+            Where Haute Scenography Meets Precision Tech.
+          </h2>
+<p class="font-body-sans text-base text-[#57423D] mt-4 font-light">
+            Every flower garland, chandelier drop, and acoustic cue orchestrated with architectural rigor.
+          </p>
+</div>
+<div class="space-y-16">
+<!-- Tile 1: Lake Mandap Scenography (IMAGE 5) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: Large High-Resolution Mandap Image -->
+<div class="lg:col-span-7 relative group overflow-hidden rounded-3xl shadow-luxury border border-[#C6A364]/30">
+<img alt="High-end Indian wedding decor floral installation, majestic mandap with gold pillars draped in saffron marigolds and jasmine garlands overlooking Lake Pichola Udaipur" class="w-full h-[480px] sm:h-[540px] object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzYIAJ6Tq0KqjJ0BYQPMRe_RIjK0hGRd0GlB-I923K5Ryv8qJMJ8vcGn37KAF5KVhy-5U-7EM3GTTGGe5rR9lR52nsYX7prQ91koLtRkpQ5xSxVAfFFqrbo2ZlLy4PxAA1r7AoPq3gpV9Im9JCA_steEaVhKBTU6Wb-Jf1gFXrHh3zv6uv34whMCsyl3Th3IfaqSahcunXQ1xfLBLm5zBm_YTsEgKYq4W7mFS21ZY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[#F8F5EF]">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-widest text-[#E9D8B4]">Lake Pichola Backdrop</span>
+<h4 class="font-serif-display text-2xl text-white">The Saffron Sunset Mandap</h4>
+</div>
+<span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold text-white">
+                  Lake Palace Deck
+                </span>
+</div>
+</div>
+<!-- Right: Architectural Decor Breakdown -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-[#B84B32] mb-2">
+<span>01 / Scenography &amp; Architecture</span>
+</div>
+<h3 class="font-serif-display text-3xl font-normal text-[#282522] leading-tight">
+                Precision AI Moodboards translated into marigold &amp; tuberose blueprints.
+              </h3>
+<p class="font-body-sans text-sm text-[#57423D] mt-4 leading-relaxed">
+                Gatherly translates abstract Pinterest dreams into physical staging schedules. Calculate stem counts down to individual Calcutta marigolds, calculate sunset candle burn rates, and ensure structural load approvals for hanging floral domes.
+              </p>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="p-3.5 rounded-xl bg-[#F8F5EF] border border-[#C6A364]/30">
+<span class="text-[11px] text-[#57423D] uppercase font-semibold">Floral Stem Count</span>
+<p class="font-serif-display text-2xl text-[#B84B32] mt-0.5">24,000+</p>
+<p class="text-[11px] text-[#57423D] mt-1">Calcutta Saffron &amp; Mogra</p>
+</div>
+<div class="p-3.5 rounded-xl bg-[#F8F5EF] border border-[#C6A364]/30">
+<span class="text-[11px] text-[#57423D] uppercase font-semibold">Twilight Muhurat</span>
+<p class="font-serif-display text-2xl text-[#282522] mt-0.5">18:14 IST</p>
+<p class="text-[11px] text-[#57423D] mt-1">Synchronized sunset backdrop</p>
+</div>
+</div>
+<div class="mt-6">
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#542D38] hover:text-[#B84B32] transition-colors" href="#command-center">
+<span>Explore Mandap Blueprint Engine</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Tile 2: Royal Sangeet Night Party (IMAGE 6) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left: Timeline Execution Narrative -->
+<div class="lg:col-span-5 order-2 lg:order-1 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-[#542D38] mb-2">
+<span>02 / Run-Of-Show Execution</span>
+</div>
+<h3 class="font-serif-display text-3xl font-normal text-[#282522] leading-tight">
+                Run-of-show synchronization. Never miss a muhurat, artist cue, or car entry.
+              </h3>
+<p class="font-body-sans text-sm text-[#57423D] mt-4 leading-relaxed">
+                When 40 cousins perform choreography to a bespoke Sufi ensemble, precision is everything. Gatherly sends silent cue vibrations to backstage stage managers, adjusts audio mixing levels, and manages the family sequence dynamically.
+              </p>
+<div class="mt-6 space-y-3 font-body-sans text-xs">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#F8F5EF] border border-[#EDE5D8]">
+<span class="material-symbols-outlined text-[#B84B32]">music_note</span>
+<div>
+<strong class="text-[#282522]">Live Artist Cueing:</strong> Sitar &amp; Percussion handover synced via real-time ear monitors.
+                  </div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-[#F8F5EF] border border-[#EDE5D8]">
+<span class="material-symbols-outlined text-[#4C5946]">schedule</span>
+<div>
+<strong class="text-[#282522]">Adaptive Delay Compensation:</strong> If dinner extends by 30 mins, after-party permits automatically flex.
+                  </div>
+</div>
+</div>
+<div class="mt-6">
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#542D38] hover:text-[#B84B32] transition-colors" href="#command-center">
+<span>View Sample Sangeet Call-Sheet</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right: Sangeet Canopy Celebration Image -->
+<div class="lg:col-span-7 order-1 lg:order-2 relative group overflow-hidden rounded-3xl shadow-luxury border border-[#C6A364]/30">
+<img alt="Intimate royal sangeet night party under illuminated canopy, fairy lights canopy, traditional Rajasthani mirror work cushions" class="w-full h-[480px] sm:h-[540px] object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1mKJrFxkMuN6uPD366P6KGT0o7Mbw94I_pnITf2hd-tttxmbd6yYnfAGE2FXRcxfOVhKUuGh7cMCwOTsJgFm9aAZMXpG0wvuHkZ5BzjVkQP4tQBYlGpN-anb3P2tvSQkbuFqLsnbxJW5h7SXKdd_ZJWEdYwUzdwLhNKThOE2X3wS4Q98p9FFKbyM88x0hIaXVjY-NxaIdNN2gLvzjcBs4-VTRk1YtVtI7TKwYJ5g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[#F8F5EF]">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-widest text-[#E9D8B4]">Illuminated Fabric Canopy</span>
+<h4 class="font-serif-display text-2xl text-white">The Royal Sufi Sangeet Night</h4>
+</div>
+<span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold text-white">
+                  320 Guests Dancing
+                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. GEMINI EVENT INTELLIGENCE HIGHLIGHT (Dynamic Prompt & Execution) -->
+<section class="w-full py-24 bg-[#F8F5EF] border-b border-[#EDE5D8]">
+<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B84B32]/10 text-[#B84B32] text-xs font-bold uppercase tracking-wider mb-3">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+<span>Google Gemini Enterprise Intelligence</span>
+</div>
+<h2 class="font-serif-display text-4xl sm:text-5xl font-normal text-[#282522]">
+            Trained on high-stakes Indian hospitality &amp; traditions.
+          </h2>
+<p class="font-body-sans text-base text-[#57423D] mt-4 font-light">
+            Ask complex logistical questions across Gujarati, Punjabi, Marwari, and South Indian rituals. Gemini understands nuances that generic AI misses.
+          </p>
+</div>
+<!-- 3 Interactive Intelligence Scenarios -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Scenario 1 -->
+<div class="bg-[#FAF2ED] p-6 rounded-2xl border border-[#C6A364]/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-8 h-8 rounded-full bg-[#542D38] text-[#F8F5EF] flex items-center justify-center text-xs font-bold mb-4">
+                01
+              </div>
+<h4 class="font-serif-display text-xl text-[#282522]">40-Page Hotel Rider Analysis</h4>
+<p class="text-xs text-[#57423D] mt-2 leading-relaxed">
+                Gemini extracts obscure surcharges buried in hotel annexures — including generator backup fees, corkage tariffs, and sound decibel limits.
+              </p>
+<div class="mt-4 p-3 bg-[#F8F5EF] rounded-xl text-xs border border-[#EDE5D8]">
+<span class="text-[10px] uppercase font-bold text-[#B84B32]">Prompt:</span>
+<p class="text-[#282522] italic mt-0.5">“Scan Fairmont Jaipur annexure for outdoor acoustic cutoffs.”</p>
+<div class="mt-2 text-[#4C5946] font-medium border-t border-[#EDE5D8] pt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<span>Flagged Clause 8.3: 22:00 IST curfew</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#EDE5D8] flex items-center justify-between text-xs text-[#542D38] font-bold">
+<span>Saved ₹2,80,000 in penalties</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Scenario 2 -->
+<div class="bg-[#FAF2ED] p-6 rounded-2xl border border-[#C6A364]/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-8 h-8 rounded-full bg-[#B84B32] text-[#F8F5EF] flex items-center justify-center text-xs font-bold mb-4">
+                02
+              </div>
+<h4 class="font-serif-display text-xl text-[#282522]">Bilingual Concierge WhatsApp Bot</h4>
+<p class="text-xs text-[#57423D] mt-2 leading-relaxed">
+                Courteous, culturally nuanced automated WhatsApp nudges in Hinglish, formal Hindi, and English that elders and youngsters both appreciate.
+              </p>
+<div class="mt-4 p-3 bg-[#F8F5EF] rounded-xl text-xs border border-[#EDE5D8]">
+<span class="text-[10px] uppercase font-bold text-[#B84B32]">Auto Concierge:</span>
+<p class="text-[#282522] italic mt-0.5">“नमस्ते वर्मा जी! आपके स्वागत हेतु उदयपुर एयरपोर्ट पर इनोवा 4:15 बजे उपलब्ध रहेगी।”</p>
+<div class="mt-2 text-[#4C5946] font-medium border-t border-[#EDE5D8] pt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">done_all</span>
+<span>94% RSVP response in 24 hrs</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#EDE5D8] flex items-center justify-between text-xs text-[#B84B32] font-bold">
+<span>Zero family friction</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Scenario 3 -->
+<div class="bg-[#FAF2ED] p-6 rounded-2xl border border-[#C6A364]/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-8 h-8 rounded-full bg-[#4C5946] text-[#F8F5EF] flex items-center justify-center text-xs font-bold mb-4">
+                03
+              </div>
+<h4 class="font-serif-display text-xl text-[#282522]">Sudden Weather Contingency Shift</h4>
+<p class="text-xs text-[#57423D] mt-2 leading-relaxed">
+                If unseasonal rain strikes the lakeside lawn, Gemini shifts 300 guests to the indoor Durbar Hall within 40 minutes, updating all vendor call-sheets.
+              </p>
+<div class="mt-4 p-3 bg-[#F8F5EF] rounded-xl text-xs border border-[#EDE5D8]">
+<span class="text-[10px] uppercase font-bold text-[#B84B32]">One-Tap Contingency:</span>
+<p class="text-[#282522] italic mt-0.5">“Activate Plan B Indoor: Re-route sound cables &amp; relocate buffet.”</p>
+<div class="mt-2 text-[#4C5946] font-medium border-t border-[#EDE5D8] pt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span>
+<span>All 14 vendors notified immediately</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-[#EDE5D8] flex items-center justify-between text-xs text-[#4C5946] font-bold">
+<span>Flawless transition</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. CURATED EDITORIAL INSPIRATION MOSAIC -->
+<section class="w-full py-24 bg-[#EDE5D8]/50 border-b border-[#C6A364]/30" id="archive">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-xs uppercase tracking-[0.25em] font-bold text-[#B84B32]">Editorial Archive &amp; Lookbooks</span>
+<h2 class="font-serif-display text-4xl sm:text-5xl font-normal text-[#282522] mt-2">
+              Curated Destination Masterpieces.
+            </h2>
+</div>
+<p class="font-body-sans text-sm text-[#57423D] max-w-md mt-4 md:mt-0 leading-relaxed">
+            Real celebrations orchestrated with Gatherly AI across the historic palaces of Rajasthan, coastal Goa villas, and South Mumbai heritage venues.
+          </p>
+</div>
+<!-- Asymmetric Magazine-Style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Feature Card (7 cols) -->
+<div class="md:col-span-7 relative group rounded-3xl overflow-hidden shadow-luxury border border-[#C6A364]/40 h-[460px]">
+<img alt="Udaipur City Palace Courtyard Gala" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCEfkwx0b7Trbf__OR3UEt7zpWN6XgwHpU41ushoJx4Bv-BIzI44zJbzEK95uSsSJtelg2xXMiBPE0SyVq7pmHXeJmdna6tmt71Kck4rn2rY55K-Ku-SOtu64-aT1ZTQxoUxfNX9gMCP_LtXXupSd6v_EaIBAghplfWh8w7KWeTvayox5prkkr6oxMUErezCl40FMzzXkp0trS5hopU27IH8VA8TsLVYqShD3S7TY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-[#F8F5EF]">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#B84B32] text-[10px] uppercase font-bold tracking-wider text-white">Palace Wedding</span>
+<span class="text-xs text-[#E9D8B4]">City Palace · Udaipur</span>
+</div>
+<h3 class="font-serif-display text-3xl text-white">The Kapoor &amp; Singhania Imperial Union</h3>
+<p class="text-xs text-white/80 mt-1 max-w-lg">3-Day celebration, ₹1.4 Cr budget orchestrated, 380 royal guests, zero vendor discrepancies.</p>
+</div>
+</div>
+<!-- Vertical Feature Card (5 cols) -->
+<div class="md:col-span-5 relative group rounded-3xl overflow-hidden shadow-luxury border border-[#C6A364]/40 h-[460px]">
+<img alt="Sunset Mandap at Pichola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzYIAJ6Tq0KqjJ0BYQPMRe_RIjK0hGRd0GlB-I923K5Ryv8qJMJ8vcGn37KAF5KVhy-5U-7EM3GTTGGe5rR9lR52nsYX7prQ91koLtRkpQ5xSxVAfFFqrbo2ZlLy4PxAA1r7AoPq3gpV9Im9JCA_steEaVhKBTU6Wb-Jf1gFXrHh3zv6uv34whMCsyl3Th3IfaqSahcunXQ1xfLBLm5zBm_YTsEgKYq4W7mFS21ZY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-[#F8F5EF]">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#542D38] text-[10px] uppercase font-bold tracking-wider text-white">Scenography Blueprint</span>
+<span class="text-xs text-[#E9D8B4]">The Leela · Udaipur</span>
+</div>
+<h3 class="font-serif-display text-2xl text-white">The Waterfront Saffron Pavilion</h3>
+<p class="text-xs text-white/80 mt-1">24,000 handpicked blossoms, solar acoustic staging, zero plastic guarantee.</p>
+</div>
+</div>
+<!-- Horizontal Half Card (6 cols) -->
+<div class="md:col-span-6 relative group rounded-3xl overflow-hidden shadow-luxury border border-[#C6A364]/40 h-[380px]">
+<img alt="Sangeet Canopy Celebration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1mKJrFxkMuN6uPD366P6KGT0o7Mbw94I_pnITf2hd-tttxmbd6yYnfAGE2FXRcxfOVhKUuGh7cMCwOTsJgFm9aAZMXpG0wvuHkZ5BzjVkQP4tQBYlGpN-anb3P2tvSQkbuFqLsnbxJW5h7SXKdd_ZJWEdYwUzdwLhNKThOE2X3wS4Q98p9FFKbyM88x0hIaXVjY-NxaIdNN2gLvzjcBs4-VTRk1YtVtI7TKwYJ5g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 text-[#F8F5EF]">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-0.5 rounded-full bg-[#4C5946] text-[10px] uppercase font-bold tracking-wider text-white">Sangeet Production</span>
+<span class="text-xs text-[#E9D8B4]">Alila Diwa · South Goa</span>
+</div>
+<h3 class="font-serif-display text-2xl text-white">Sunset Sufi &amp; Electronic Soirée</h3>
+<p class="text-xs text-white/80 mt-1">12 family performances, live brass section, precision call-sheet timing.</p>
+</div>
+</div>
+<!-- Editorial Stats Tile (6 cols) -->
+<div class="md:col-span-6 rounded-3xl bg-[#FAF2ED] p-8 border border-[#C6A364]/40 shadow-luxury flex flex-col justify-between h-[380px]">
+<div>
+<span class="text-xs uppercase font-bold tracking-[0.2em] text-[#B84B32]">By The Numbers</span>
+<h3 class="font-serif-display text-3xl text-[#282522] mt-2">Precision at Historic Scale</h3>
+<p class="text-xs text-[#57423D] mt-2 leading-relaxed">Gatherly AI powers the nation’s most demanding milestone events without a single slipped detail.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-[#EDE5D8]">
+<div>
+<span class="font-serif-display text-3xl sm:text-4xl text-[#542D38]">₹480 Cr+</span>
+<p class="text-[11px] text-[#57423D] uppercase font-bold tracking-wider mt-1">INR Capital Orchestrated</p>
+</div>
+<div>
+<span class="font-serif-display text-3xl sm:text-4xl text-[#B84B32]">14,000+</span>
+<p class="text-[11px] text-[#57423D] uppercase font-bold tracking-wider mt-1">Celebrations Completed</p>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xs text-[#57423D] font-medium">99.8% On-Time Muhurat Execution</span>
+<a class="text-xs font-bold text-[#542D38] hover:text-[#B84B32] flex items-center gap-1" href="#command-center">
+<span>Explore Full Dossier</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BOLD LUXURY FOOTER & FINAL INVITATION -->
+<section class="w-full py-24 bg-gradient-to-b from-[#542D38] to-[#3A1A22] text-[#F8F5EF] relative overflow-hidden">
+<!-- Ambient Gold & Terracotta Glows -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#B84B32]/30 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-[#C6A364]/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#C6A364]/50 text-[#E9D8B4] text-xs font-semibold uppercase tracking-[0.2em] mb-6 shadow-sm">
+<span class="material-symbols-outlined text-sm text-[#E9D8B4]">diamond</span>
+<span>Bespoke Private Access</span>
+</div>
+<h2 class="font-serif-display text-4xl sm:text-6xl font-normal text-[#FAF2ED] tracking-tight leading-[1.1]">
+          Your milestone celebration deserves an extraordinary mind.
+        </h2>
+<p class="font-body-sans text-base sm:text-lg text-[#EDE5D8]/90 max-w-xl mx-auto mt-6 font-light leading-relaxed">
+          Step into a world where historic grandeur harmonizes with Google Gemini intelligence. Begin architecting your multi-day celebration today.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#B84B32] text-white border border-[#C6A364] text-xs font-bold uppercase tracking-wider shadow-luxury-deep hover:bg-[#98341D] hover:scale-105 transition-all" href="#">
+<span>Start Planning with Gatherly</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 backdrop-blur-md text-[#FAF2ED] border border-white/20 text-xs font-semibold uppercase tracking-wider hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-base text-[#E9D8B4]">chat</span>
+<span>Consult Private Concierge</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="mt-14 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-8 text-xs text-[#EDE5D8]/70">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#E9D8B4] text-base">verified</span>
+            Full INR (₹) Escrow Protection
+          </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#E9D8B4] text-base">lock</span>
+            Encrypted Family RSVP Portals
+          </span>
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#E9D8B4] text-base">support_agent</span>
+            Dedicated Day-of Dispatch Team
+          </span>
+</div>
+</div>
+</section>
+</main>
+<!-- LUXURY FOOTER (Deep Burgundy & Warm Ivory) -->
+<footer class="w-full bg-[#3A1A22] border-t border-[#C6A364]/30 text-[#EDE5D8] py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+<!-- Col 1: Brand Info -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-[#542D38] border border-[#C6A364] flex items-center justify-center text-[#F8F5EF]">
+<span class="font-serif-display text-lg italic">G</span>
+</div>
+<span class="font-serif-display text-2xl text-[#FAF2ED] tracking-tight">Gatherly AI</span>
+</div>
+<p class="font-body-sans text-xs text-[#EDE5D8]/70 max-w-sm leading-relaxed">
+            The world’s first luxury editorial event intelligence platform. Melding classical Indian hospitality with Gemini artificial intelligence.
+          </p>
+<div class="pt-2">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-[#C6A364]/40 text-xs text-[#E9D8B4]">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>Regional Hubs: Udaipur · Mumbai · New Delhi · Goa</span>
+</div>
+</div>
+</div>
+<!-- Col 2: Product -->
+<div class="space-y-3">
+<span class="text-xs uppercase font-bold tracking-widest text-[#E9D8B4]">Platform</span>
+<ul class="space-y-2 text-xs text-[#EDE5D8]/80 font-medium">
+<li><a class="hover:text-white transition-colors" href="#">Gemini Copilot 2.0</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Escrow Master Ledger</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Multi-Day Timeline Engine</a></li>
+<li><a class="hover:text-white transition-colors" href="#">WhatsApp Concierge Bot</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Vendor RFP Scanner</a></li>
+</ul>
+</div>
+<!-- Col 3: Occasions -->
+<div class="space-y-3">
+<span class="text-xs uppercase font-bold tracking-widest text-[#E9D8B4]">Archetypes</span>
+<ul class="space-y-2 text-xs text-[#EDE5D8]/80 font-medium">
+<li><a class="hover:text-white transition-colors" href="#">Royal Destination Weddings</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Palace &amp; Fort Galas</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Milestone Anniversaries</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Curated Sufi Sangeets</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Private Island Soirées</a></li>
+</ul>
+</div>
+<!-- Col 4: Concierge & Legal -->
+<div class="space-y-3">
+<span class="text-xs uppercase font-bold tracking-widest text-[#E9D8B4]">Concierge &amp; Legal</span>
+<ul class="space-y-2 text-xs text-[#EDE5D8]/80 font-medium">
+<li><a class="hover:text-white transition-colors" href="#">Private Client Services</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Security &amp; Escrow Standards</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy (India DPDPA)</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Master License</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hospitality Partner Portal</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Credits -->
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EDE5D8]/60">
+<span>© 2026 Gatherly AI Technologies Private Limited. All rights reserved.</span>
+<div class="flex items-center gap-4 text-[#E9D8B4]">
+<span class="italic font-serif-display">Elegance in Execution.</span>
+<span>•</span>
+<span>INR (₹) Base System</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

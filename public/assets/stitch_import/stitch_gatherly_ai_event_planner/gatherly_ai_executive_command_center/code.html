@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#e7f5dd", "error": "#ba1a1a", "tertiary-fixed": "#d9e7cf", "surface-variant": "#e8e1dc", "inverse-primary": "#ffb4a3", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#141e10", "surface-container": "#f4ece7", "on-background": "#1e1b18", "on-secondary-fixed": "#32101b", "tertiary-fixed-dim": "#bdcbb4", "surface-container-low": "#faf2ed", "secondary-container": "#ffc5d3", "on-error": "#ffffff", "inverse-surface": "#33302d", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "surface-tint": "#a43c25", "surface": "#fff8f4", "primary-fixed-dim": "#ffb4a3", "secondary": "#7f525d", "tertiary-container": "#65715e", "background": "#fff8f4", "on-primary-fixed-variant": "#842510", "secondary-fixed-dim": "#f1b7c5", "surface-container-highest": "#e8e1dc", "on-tertiary-fixed-variant": "#3e4a39", "error-container": "#ffdad6", "on-primary-container": "#ffedea", "surface-bright": "#fff8f4", "primary-container": "#b84b32", "on-primary-fixed": "#3d0600", "on-secondary": "#ffffff", "on-secondary-container": "#7b4f5a", "surface-container-high": "#eee7e2", "surface-dim": "#e0d9d4", "on-secondary-fixed-variant": "#643b46", "on-primary": "#ffffff", "outline-variant": "dec0b9", "secondary-fixed": "#ffd9e1", "primary": "#98341d", "inverse-on-surface": "#f7efea", "tertiary": "#4c5946", "on-surface": "#1e1b18", "on-surface-variant": "#57423d", "primary-fixed": "#ffdad2", "outline": "#8a716c" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "margin-mobile": "1.25rem", "space-lg": "1.5rem", "space-md": "1rem", "margin": "3rem", "space-xl": "2.5rem" }, "fontFamily": { "display-hero-mobile": [ "Newsreader" ], "body-sm": [ "Manrope" ], "currency-numeral": [ "Manrope" ], "display-hero": [ "Newsreader" ], "body-lg": [ "Manrope" ], "headline-md": [ "Newsreader" ], "headline-lg-mobile": [ "Newsreader" ], "label-sm": [ "Manrope" ], "title-md": [ "Manrope" ], "title-lg": [ "Manrope" ], "label-md": [ "Manrope" ], "headline-lg": [ "Newsreader" ], "body-md": [ "Manrope" ], "headline-sm": [ "Newsreader" ] }, "fontSize": { "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "currency-numeral": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "title-md": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "label-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="p-space-lg flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm font-semibold shadow-sm">G</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-medium">Gatherly AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Intelligence &amp; Event Command</span></div></div><div class="px-space-md pt-space-xs"><p class="px-space-sm pb-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ceremonial Suite</p><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-sm"><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT transition-all bg-primary-container text-on-primary-container font-semibold shadow-sm" data-path="overview" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">dashboard</span><span class="font-body-md text-body-md">Overview / Command</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="my-events" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">event_note</span><span class="font-body-md text-body-md">My Events</span></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full">4 Active</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="budget-and-escrow" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">account_balance_wallet</span><span class="font-body-md text-body-md">Budget &amp; Escrow Ledger</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="run-of-show" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">schedule</span><span class="font-body-md text-body-md">Run-of-Show Timelines</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="curated-vendors" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">storefront</span><span class="font-body-md text-body-md">Curated Vendors &amp; Riders</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="royal-guests" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">group</span><span class="font-body-md text-body-md">Royal Guests &amp; RSVP Hub</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="gemini-copilot" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-lg text-primary">auto_awesome</span><span class="font-body-md text-body-md">Gemini Copilot</span></div><span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full">AI</span></a></nav></div></div><div class="flex flex-col p-space-md gap-3 bg-surface-container-low"><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-high text-on-surface font-semibold"><a class="flex items-center gap-3 px-space-md py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="concierge-desk" href="#"><span class="material-symbols-outlined text-lg">support_agent</span><span class="font-body-md text-body-md">Concierge Desk</span></a><a class="flex items-center gap-3 px-space-md py-2 rounded-DEFAULT text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-lg">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav><div class="pt-space-sm"><div class="p-3 bg-surface-container rounded-DEFAULT flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Portfolio Scope</span><span class="font-label-sm text-label-sm text-primary font-bold">Verified</span></div><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-md text-label-md">MK</div><div class="flex flex-col overflow-hidden"><span class="font-title-md text-title-md truncate text-on-surface leading-tight">Maharani &amp; Kapur</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Executive Architect</span></div></div><div class="pt-1"><span class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹480 Cr</span><span class="font-body-sm text-body-sm text-on-surface-variant ml-1.5">Managed</span></div></div></div></div></aside><div class="pl-72 min-h-screen flex flex-col"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center flex-1 max-w-xl"><div class="w-full flex items-center gap-2.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-inner"><span class="material-symbols-outlined text-on-surface-variant text-lg">search</span><input class="bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant w-full" placeholder="Search celebrations, vendors, GST invoices, or Gemini prompts..." type="text"/><kbd class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface text-on-surface-variant shadow-sm">⌘K</kbd></div></div><div class="flex items-center gap-4"><div class="flex items-center bg-surface-container rounded-full p-1"><button class="px-3 py-1 rounded-full bg-surface font-label-md text-label-md text-on-surface shadow-sm font-semibold" type="button">₹ INR</button><button class="px-3 py-1 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">$ USD</button></div><button class="relative p-2.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface flex items-center justify-center" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface"></span></button><button class="flex items-center gap-2 px-space-md py-2.5 rounded-full bg-primary-container text-on-primary-container hover:opacity-95 transition-opacity font-label-md text-label-md" type="button"><span class="material-symbols-outlined text-base">add</span><span>New Celebration</span></button><div class="pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-high" src="https://lh3.googleusercontent.com/aida/AEtjO1XD3Gp2ztKU1C1OMXBGEZVDVKV4sZPyQKBICXSYqr8qyJQ7tlAx3TbxRFD-qOao7Ji-YQYfGGDtu7QEv6DcMMeZ41UQiDMUbBEMf3nkKwHpUDD-2q5LCG1XcBx7th7EvImIqtEA7WitVsE1E5MhHkYuC6RkqBlG_02sEcfMyjKz5oo9zO9moAo2CDnclf7PqRfvF7d575jH1sefJirmqJsWsNJJJPUQH5cA4T4Riofa"/></div></div></header><main class="relative pt-20 w-full px-space-xl pb-space-xl flex-1 bg-surface"><div class="flex flex-col w-full space-y-8">
+<!-- Top Welcome & Filter Ribbon -->
+<section class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-2">
+<div class="space-y-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-bold">Executive Command Center</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold bg-tertiary-fixed/60 px-2 py-0.5 rounded-full">Active Season 2026/27</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-normal tracking-tight">
+        Namaste, <span class="italic font-display-hero text-headline-lg text-primary">Avantika</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        4 Landmark Celebrations in motion. Portfolio escrow liquidity is locked at 84%, with Gemini copilot active across 18 vendor riders and lake-terrace municipal permits.
+      </p>
+</div>
+<!-- Filter Pills & Quick Actions -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md shadow-sm">All Celebrations (4)</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">Royal Weddings (3)</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors">Heritage Galas (1)</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">filter_vintage</span>
+        Q4 Peak Season
+      </button>
+</div>
+</section>
+<!-- High-Density Executive Metric Bento -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+<!-- Metric 1: Portfolio Capital -->
+<div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Orchestrated Capital</span>
+<span class="p-1.5 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-normal text-on-surface">₹3,45,00,000</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="font-semibold text-tertiary flex items-center">
+<span class="material-symbols-outlined text-sm">verified_user</span> 84%
+          </span>
+          Liquidity secured in bank escrow
+        </div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 84%"></div>
+</div>
+</div>
+<!-- Metric 2: Escrow Disbursed vs Locked -->
+<div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active Disbursements</span>
+<span class="p-1.5 rounded-full bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-lg">payments</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-normal text-on-surface">₹1,18,50,000</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center justify-between">
+<span>₹2.26 Cr Locked</span>
+<span class="text-tertiary font-semibold text-label-sm font-label-sm bg-tertiary-fixed px-1.5 py-0.5 rounded">GST Compliant</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-primary-container h-full" style="width: 34%"></div>
+<div class="bg-surface-variant h-full" style="width: 66%"></div>
+</div>
+</div>
+<!-- Metric 3: Royal Guests & Concierge RSVP -->
+<div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Royal Guest Network</span>
+<span class="p-1.5 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-lg">diversity_1</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-normal text-on-surface">1,420 <span class="text-title-md font-title-md text-on-surface-variant font-normal">/ 1,650</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center justify-between">
+<span class="text-on-surface font-medium">86% via WhatsApp Bot</span>
+<span class="text-secondary font-medium">38 Suites Booked</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 86%"></div>
+</div>
+</div>
+<!-- Metric 4: Gemini Audit Safeguards -->
+<div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Gemini Rider Audits</span>
+<span class="p-1.5 rounded-full bg-surface-container text-tertiary">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md font-normal text-on-surface">14 Flagged Clauses</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="text-primary font-bold">₹4,85,000</span>
+<span>penalties waived this week</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+</section>
+<!-- Primary Spotlight: Flagship Celebration Hero Showcase -->
+<section class="relative rounded-DEFAULT overflow-hidden shadow-lg bg-surface-container-high">
+<div class="grid grid-cols-1 lg:grid-cols-12 min-h-[460px]">
+<!-- Visual Column with Backdrop -->
+<div class="lg:col-span-7 relative min-h-[300px] lg:min-h-full">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Majestic imperial Indian wedding at night in a grand palace courtyard in Udaipur with grand chandeliers, thousands of rose petals on the ground, golden lit carved stone arches, reflective pool, and a royal bride and groom in maroon velvet attire." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnimDms3QayDk7wwN3ZmiLF7SzAqkbt7NdVTRUI9gIwlP6OWlWfdyrAZW3T-DYsecQYVd80X-kx0ZAzmXb7VP9n37dOmjZx_dp_1uRCKJzFz1QXAdZmgnB2lvXaiOJ9lrc607iz3P-27bfYXoM7BwEusMrZJHnT6fxBLdniJvY-N_3sb8SIH4No4J_ncb6F3iSULYCJBQ-k63QWmTvTnMuOh1CJs9u_4NEQ1uMVfM')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-surface-container-high/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-surface-container-high/50 lg:to-surface-container-high"></div>
+</div>
+<div class="absolute top-6 left-6 flex flex-wrap gap-2">
+<span class="bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Live Flagship
+          </span>
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full font-label-sm text-label-sm">
+            T-minus 14 Days
+          </span>
+</div>
+<div class="absolute bottom-6 left-6 right-6 lg:hidden bg-surface/90 backdrop-blur-md p-4 rounded-DEFAULT">
+<div class="font-label-sm text-label-sm text-primary font-semibold uppercase">18–20 Dec 2026 • Udaipur</div>
+<div class="font-headline-sm text-headline-sm text-on-surface mt-1">Kapoor &amp; Singhania Imperial Wedding</div>
+</div>
+</div>
+<!-- Command Data Column -->
+<div class="lg:col-span-5 p-6 lg:p-8 flex flex-col justify-between space-y-6 bg-surface-container-high">
+<div>
+<div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-base text-primary">location_on</span>
+            The Oberoi Udaivilās, Udaipur
+          </div>
+<h2 class="hidden lg:block font-headline-md text-headline-md text-on-surface mt-1">
+            Kapoor &amp; Singhania Imperial 3-Day Wedding
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Multi-palace celebration spanning Lakeside Welcome Sundowner, Imperial Zenana Sangeet, and 24,000-marigold Lake Terrace Vedic Muhurat.
+          </p>
+<!-- Readiness Badges -->
+<div class="flex flex-wrap gap-2 mt-4">
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-DEFAULT shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-tertiary">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface">Sangeet Rehearsals 100%</span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-DEFAULT shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary">construction</span>
+<span class="font-label-sm text-label-sm text-on-surface">Mandap Scenography 94%</span>
+</div>
+<div class="bg-surface-container-lowest px-3 py-1.5 rounded-DEFAULT shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">flight_land</span>
+<span class="font-label-sm text-label-sm text-on-surface">Chauffeur Fleet Allocated</span>
+</div>
+</div>
+</div>
+<!-- Quick Numerical Matrices -->
+<div class="grid grid-cols-3 gap-3 p-4 rounded-DEFAULT bg-surface-container-lowest shadow-sm">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Target Budget</div>
+<div class="font-title-lg text-title-lg text-on-surface font-semibold mt-0.5">₹1.20 Cr</div>
+<div class="font-body-sm text-body-sm text-tertiary">₹54.2L Disbursed</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Attendees</div>
+<div class="font-title-lg text-title-lg text-on-surface font-semibold mt-0.5">320 Royal</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">310 RSVP Ready</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Muhurat Sync</div>
+<div class="font-title-lg text-title-lg text-tertiary font-semibold mt-0.5">18:14 IST</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Twilight Aligned</div>
+</div>
+</div>
+<!-- Action Call Sheet Buttons -->
+<div class="flex items-center gap-3 pt-2">
+<button class="flex-1 py-3 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-lg">event_upcoming</span>
+            Enter Workspace
+          </button>
+<button class="py-3 px-4 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-lg">description</span>
+            Call Sheet
+          </button>
+<button class="p-3 rounded-full bg-surface-container-lowest text-on-surface hover:text-primary shadow-sm transition-colors" title="WhatsApp Vendor Broadcast">
+<span class="material-symbols-outlined text-xl">chat</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Two-Column Operational & Intelligence Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN (60%): Financial Ledger & Run-of-Show Timelines -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Section A: Financial Capital Health & Escrow Allocation -->
+<div class="bg-surface-container-lowest p-6 lg:p-8 rounded-DEFAULT shadow-sm space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Capital Allocation &amp; Escrow Security</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Discipline Breakdown (INR)</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+              Bank of Baroda Escrow
+            </span>
+</div>
+</div>
+<!-- Visual Distribution Stack Bar -->
+<div class="space-y-2">
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 40%" title="Venue (40%)"></div>
+<div class="bg-primary-container h-full" style="width: 26%" title="Scenography (26%)"></div>
+<div class="bg-secondary h-full" style="width: 18%" title="Royal Catering (18%)"></div>
+<div class="bg-tertiary h-full" style="width: 9%" title="Cinema &amp; Media (9%)"></div>
+<div class="bg-surface-variant h-full" style="width: 7%" title="Music &amp; Riders (7%)"></div>
+</div>
+<div class="flex flex-wrap items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<span>Total Budget: <strong class="text-on-surface">₹1,20,00,000</strong></span>
+<span>Escrow Locked: <strong class="text-tertiary">₹65,80,000 (55%)</strong></span>
+</div>
+</div>
+<!-- Detailed Breakdown Rows -->
+<div class="space-y-3 pt-2">
+<!-- Row 1: Venue -->
+<div class="flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary shrink-0"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Venue &amp; Palatial Suites</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Oberoi Udaivilās Escrow Verified • 48 Heritage Rooms</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹48,00,000</div>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">40% • 100% Locked</span>
+</div>
+</div>
+<!-- Row 2: Scenography -->
+<div class="flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary-container shrink-0"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Bespoke Scenography &amp; Mandap Decor</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">24,000+ Saffron Marigolds, Belgian Chandeliers, Agni Basin</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹31,20,000</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">26% • ₹15L Disbursed</span>
+</div>
+</div>
+<!-- Row 3: Catering -->
+<div class="flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-secondary shrink-0"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Royal Catering &amp; Imperial Banquets</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">42 Jain covers, Mewari Thali, Live chaat stations verified</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹21,60,000</div>
+<span class="font-label-sm text-label-sm text-tertiary">18% • Escrow Verified</span>
+</div>
+</div>
+<!-- Row 4: Heritage Cinema -->
+<div class="flex items-center justify-between p-3.5 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-tertiary shrink-0"></div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Heritage Cinema &amp; Editorial Photography</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">DGCA Approved Drone Pilots, 12-Camera Crew, Film Lab</div>
+</div>
+</div>
+<div class="text-right">
+<div class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹10,80,000</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">9% • Stage 1 Cleared</span>
+</div>
+</div>
+</div>
+<!-- Upcoming Milestone Disbursements Micro-Ledger -->
+<div class="pt-4 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Upcoming Milestone Escrow Releases</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold cursor-pointer hover:underline">View All 12 Milestones</span>
+</div>
+<div class="space-y-2">
+<div class="p-3 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Stage 2 Mandap Load-in</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Trigger: Photo verification by Family Captain on site</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹4,50,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Due 17 Dec</span>
+</div>
+</div>
+<div class="p-3 rounded-DEFAULT bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">lock_clock</span>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Sound &amp; Sufi Qawwali Staging Setup</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Trigger: Local SDM Curfew &amp; Decibel Decoupling Test</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹2,80,000</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Due 18 Dec</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section B: Run-of-Show & Muhurat Timeline Engine -->
+<div class="bg-surface-container-lowest p-6 lg:p-8 rounded-DEFAULT shadow-sm space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Astrological &amp; Operational Cadence</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Critical Day-of-Call Muhurat Engine</h3>
+</div>
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+            Day 3: Sacred Wedding
+          </span>
+</div>
+<!-- Vertical Precision Timeline -->
+<div class="relative pl-6 space-y-8 before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Item 1: 16:30 Baraat -->
+<div class="relative group">
+<span class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+</span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary font-currency-numeral">16:30 IST</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Vintage Packard Baraat Ignition</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold self-start sm:self-auto">Chauffeur Ready</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Groom leaves Shikarbadi via vintage Packard. Dhol ensemble (14 members) staged at Oberoi Welcome Gate with rose petal brass cannons.
+            </p>
+</div>
+<!-- Item 2: 17:45 Varmala Sunset -->
+<div class="relative group">
+<span class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-secondary ring-4 ring-surface-container-lowest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-on-secondary"></span>
+</span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-secondary font-currency-numeral">17:45 IST</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Lake Pichola Sunset Varmala</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold self-start sm:self-auto">Golden Hour Lock</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Sunset alignment over Lake Palace. Dual drone cinematography operators synchronized for 360-degree aerial capture during garland exchange.
+            </p>
+</div>
+<!-- Item 3: 18:14 Vedic Muhurat (Highlighted) -->
+<div class="relative p-4 rounded-DEFAULT bg-surface-container-low shadow-inner">
+<span class="absolute -left-6 top-5 w-4 h-4 rounded-full bg-primary ring-4 ring-surface-container-lowest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-surface-container-lowest"></span>
+</span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-primary font-currency-numeral">18:14 IST</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Auspicious Vedic Muhurat — Sacred Pheras</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-semibold self-start sm:self-auto">Auspicious Window</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-1.5 font-medium">
+              Panditji Shastriji verified. Smoke-free Havana Agni Kund airflow check completed; saffron marigold canopy perfumed with pure sandalwood extract.
+            </p>
+</div>
+<!-- Item 4: 21:00 Imperial Banquet -->
+<div class="relative group">
+<span class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-surface-container-highest ring-4 ring-surface-container-lowest flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+</span>
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-on-surface font-currency-numeral">21:00 IST</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Imperial Durbar Banquet &amp; Live Sufi Ensemble</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-semibold self-start sm:self-auto">Permits Signed</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Nizami Brothers Sufi performance inside Courtyard. Noise limits calibrated with SDM municipal guidelines; royal Mewari dinner service commences.
+            </p>
+</div>
+</div>
+</div>
+<!-- Scenography Visual Showcase Inset -->
+<div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Visual Scenography Blueprint</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold">Mandap Archetype: Golden Pavilion</span>
+</div>
+<div class="relative rounded-DEFAULT overflow-hidden h-64 bg-cover bg-center" data-alt="Exquisite wedding mandap in Udaipur overlooking calm lake waters at golden sunset, adorned with rich orange and white marigold garlands, crystal chandeliers, royal carpets, and brass vessels with floating petals." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCw5Qy6PgMuqPKCww9aAgKf1DpnbG0PVSl_CPLGnMEOMVWVj9Dc4_ZaPavkAoE5HLwFj6sj9CBYX_0fGD8xSedmgaifAEEPtUL0ckMUG2QJM-SSHzIWwb1Ii0R82VkppscDRm19rQVVD-Ybq81c5asNaz_5pMXvP4GNDW6MedTAzy816I1Gf39l-pTfaZMqW3nzzpB2cAj0NZN4KfDsvtV0eb73cB4u_70D9cGTx2I')">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-end justify-between text-on-primary">
+<div>
+<div class="font-title-md text-title-md text-surface font-semibold">Lakeside Golden Mandap — The Promenade</div>
+<div class="font-body-sm text-body-sm text-surface-variant">Constructed with hand-carved Rajasthani stone pillars &amp; heritage zardozi drape</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">Photo Render Verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (40%): Gemini Copilot, Curated Vendors & Activity Audit -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Section C: Google Gemini Copilot Intelligence Desk -->
+<div class="bg-surface-container-lowest p-6 lg:p-7 rounded-DEFAULT shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+<span class="font-title-lg text-title-lg text-on-surface font-semibold">Gemini Copilot</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+            v1.5 Pro Hospitality
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Autonomous contract scanner and real-time operational monitor. 3 proactive interventions logged today.
+        </p>
+<!-- Gemini Interventions Cards -->
+<div class="space-y-3">
+<!-- Intervention 1 -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low space-y-1.5 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">gavel</span> Contract Rider Audit
+              </span>
+<span class="font-body-sm text-body-sm text-tertiary font-bold">+₹65,000 Saved</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface">Generator Surcharge Neutralized</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Clause 18.4 in Hotel Annexure had a stealth fuel fee. Gemini generated a counter-proposal invoking master rate card. Hotel accepted."
+            </p>
+</div>
+<!-- Intervention 2 -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low space-y-1.5 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">cloud</span> Meteorological Alert
+              </span>
+<span class="font-body-sm text-body-sm text-secondary font-bold">Contingency Pre-staged</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface">Lake Terrace Wind Gust Shift</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Gusts predicted at 22 knots at 19:00 IST. Mandap canopy tethering reinforcement dispatched to Vivaah Scenography."
+            </p>
+</div>
+<!-- Intervention 3 -->
+<div class="p-3.5 rounded-DEFAULT bg-surface-container-low space-y-1.5 hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">restaurant</span> Dietary Compliance
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">32 VIP covers</span>
+</div>
+<div class="font-title-md text-title-md text-on-surface">Marwari Jain Elder Preferences</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+              "Converted elder guest WhatsApp preferences into Hindi kitchen tickets. Zero allium guarantee locked with Executive Sous Chef."
+            </p>
+</div>
+</div>
+<!-- Interactive AI Prompt Bar -->
+<div class="relative pt-2">
+<div class="flex items-center gap-2 p-2 pl-3 rounded-full bg-surface-container text-on-surface shadow-inner">
+<span class="material-symbols-outlined text-primary text-lg">mic</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant w-full" placeholder="Ask Gemini: 'Reallocate ₹2.5L from fireworks to floral...'" type="text"/>
+<button class="p-2 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section D: Curated High-Stakes Vendors & Riders -->
+<div class="bg-surface-container-lowest p-6 lg:p-7 rounded-DEFAULT shadow-sm space-y-5">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Partner Ecosystem</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Curated Vendors &amp; Riders</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline">
+            View All 18 Booked
+          </button>
+</div>
+<div class="space-y-3">
+<!-- Vendor 1 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-title-md">
+                VS
+              </div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Vivaah Scenography Co.</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mandap &amp; Floral Decor • 4.9 ★</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Contract Locked</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">50% Escrow Funded</div>
+</div>
+</div>
+<!-- Vendor 2 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-title-md">
+                RK
+              </div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">The Royal Kitchens (Chef Vikram)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Imperial Mewari Catering • 5.0 ★</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Tasting Passed</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Menu Annexure Signed</div>
+</div>
+</div>
+<!-- Vendor 3 -->
+<div class="p-3 rounded-DEFAULT bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-title-md">
+                JR
+              </div>
+<div>
+<div class="font-title-md text-title-md text-on-surface">Stories by Joseph Radhik</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Heritage Cinema &amp; Stills • 4.9 ★</div>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Crew of 12</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">DGCA Pass Issued</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section E: Executive Audit & Immutable Activity Stream -->
+<div class="bg-surface-container-lowest p-6 lg:p-7 rounded-DEFAULT shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Immutable Audit Trail</span>
+<span class="material-symbols-outlined text-on-surface-variant text-base">history</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-start gap-3 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0"></span>
+<div>
+<span class="font-semibold text-on-surface">Escrow payout ₹3,20,000 approved</span>
+<span class="text-on-surface-variant"> by Groom Captain Anand Sharma via Biometric Aadhar Sign.</span>
+<div class="text-outline text-body-sm">12m ago • Milestone #04</div>
+</div>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1.5 shrink-0"></span>
+<div>
+<span class="font-semibold text-on-surface">14 Baraat Turban sizes locked</span>
+<span class="text-on-surface-variant"> via automated WhatsApp Concierge dialogue.</span>
+<div class="text-outline text-body-sm">48m ago • Guest Services</div>
+</div>
+</div>
+<div class="flex items-start gap-3 text-body-sm font-body-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 shrink-0"></span>
+<div>
+<span class="font-semibold text-on-surface">District Magistrate sound exemption renewed</span>
+<span class="text-on-surface-variant"> for Lake Courtyard until 22:30 IST.</span>
+<div class="text-outline text-body-sm">2h ago • Municipal Clearance</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

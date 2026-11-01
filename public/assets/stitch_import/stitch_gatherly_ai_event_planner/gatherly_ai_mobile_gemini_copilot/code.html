@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#e7f5dd", "primary-fixed": "#ffdad2", "surface-dim": "#e0d9d4", "tertiary-fixed-dim": "#bdcbb4", "on-background": "#1e1b18", "surface-container-highest": "#e8e1dc", "on-surface-variant": "#57423d", "on-tertiary-fixed": "#141e10", "surface-container-lowest": "#ffffff", "surface-tint": "#a43c25", "inverse-surface": "#33302d", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-primary-fixed-variant": "#842510", "inverse-primary": "#ffb4a3", "surface-variant": "#e8e1dc", "on-tertiary-fixed-variant": "#3e4a39", "primary-fixed-dim": "#ffb4a3", "secondary-fixed": "#ffd9e1", "secondary-fixed-dim": "#f1b7c5", "tertiary": "#4c5946", "on-surface": "#1e1b18", "primary-container": "#b84b32", "surface-container-high": "#eee7e2", "secondary": "#7f525d", "secondary-container": "#ffc5d3", "background": "#fff8f4", "outline-variant": "#dec0b9", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#643b46", "on-primary-fixed": "#3d0600", "inverse-on-surface": "#f7efea", "on-secondary": "#ffffff", "on-primary": "#ffffff", "tertiary-fixed": "#d9e7cf", "outline": "#8a716c", "on-primary-container": "#ffedea", "on-secondary-container": "#7b4f5a", "surface-container-low": "#faf2ed", "surface-container": "#f4ece7", "tertiary-container": "#65715e", "surface-bright": "#fff8f4", "error": "#ba1a1a", "on-secondary-fixed": "#32101b", "primary": "#98341d", "surface": "#fff8f4" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "space-md": "1rem", "gutter-sm": "1rem", "margin": "3rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "display-hero": ["Newsreader"], "display-hero-mobile": ["Newsreader"], "headline-lg-mobile": ["Newsreader"], "label-sm": ["Manrope"], "currency-numeral": ["Manrope"], "label-md": ["Manrope"], "title-lg": ["Manrope"], "headline-sm": ["Newsreader"], "title-md": ["Manrope"], "headline-lg": ["Newsreader"], "body-sm": ["Manrope"], "headline-md": ["Newsreader"], "body-lg": ["Manrope"], "body-md": ["Manrope"] }, "fontSize": { "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "currency-numeral": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(40,37,34,0.03)] pt-safe"><div class="h-20 px-margin-mobile flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-baseline gap-space-sm"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-normal">Gatherly</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">AI</span></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low shadow-[0_1px_4px_rgba(40,37,34,0.03)]"><span class="font-currency-numeral text-xs text-primary font-semibold">₹</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">INR</span></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between"><button class="group flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-[0.98] transition-all max-w-[260px]"><span class="material-symbols-outlined text-secondary text-[16px]">celebration</span><span class="font-label-md text-label-md truncate text-on-surface font-medium">Kapoor &amp; Singhania Imperial • Udaipur</span><span class="material-symbols-outlined text-outline text-[16px] group-hover:translate-y-0.5 transition-transform">unfold_more</span></button><span class="font-label-sm text-label-sm text-outline-variant font-medium tracking-wide uppercase">Copilot</span></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin-mobile pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-secondary text-on-secondary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Multimodal Legal &amp; Ledger</span>
+</div>
+<h1 class="font-headline-md text-headline-md tracking-tight text-on-surface">Gemini Copilot — Ceremonial Command</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+      Hospitality Core v1.5 Pro • Synchronized with Udaipur Escrow Node
+    </p>
+</div>
+<div class="-mx-margin-mobile px-margin-mobile overflow-x-auto no-scrollbar flex items-center gap-space-sm pt-0.5 pb-1">
+<button class="flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]">verified</span>
+<span class="font-label-md text-label-md">Audit genset surcharge</span>
+</button>
+<button class="flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[15px]">swap_horiz</span>
+<span class="font-label-md text-label-md">Reallocate ₹2.1L</span>
+</button>
+<button class="flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-outline text-[15px]">edit_note</span>
+<span class="font-label-md text-label-md">Draft Marwari kitchen note</span>
+</button>
+<button class="flex-shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-outline text-[15px]">flight_takeoff</span>
+<span class="font-label-md text-label-md">Check drone permit</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-lg">
+<div class="flex justify-end pl-8">
+<div class="relative bg-surface-container-highest text-on-surface p-space-md rounded-2xl rounded-tr-xs shadow-sm max-w-[340px] flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-outline text-[11px] font-label-sm uppercase tracking-wider">
+<span class="font-medium text-on-surface-variant">Lead Planner • 11:42 AM</span>
+<span class="material-symbols-outlined text-[13px] text-tertiary">done_all</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+          Oberoi Udaivilās just submitted an annexure addendum for an additional 40kVA generator backup totaling ₹2,10,000. Can you audit this against our master contract?
+        </p>
+</div>
+</div>
+<div class="flex flex-col gap-space-md pr-2">
+<div class="flex items-center gap-space-sm pl-1">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Gemini Intelligence</span>
+<span class="font-body-sm text-[11px] text-outline">Verified against MCA Registry &amp; Udaivilās Master Rider</span>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-bold">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+            Discrepancy Flagged: 100% Inadmissible Fee
+          </span>
+<span class="font-currency-numeral text-xs font-bold text-error">₹2,10,000 Overcharge</span>
+</div>
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">contract</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Clause 14.2 Violation</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-serif italic leading-relaxed">
+            “Signed Master Agreement Clause 14.2 explicitly includes auxiliary twin-redundant 40kVA generator synchronizers within the ₹48,00,000 venue hire fee.”
+          </p>
+<div class="flex items-center gap-2 pt-1 text-[12px] font-label-sm text-outline">
+<span>Doc ID: UDAI-2025-VNR-09</span>
+<span>•</span>
+<span class="text-tertiary font-semibold">P. 24 §B Registered</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-high p-3.5 rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Counter-Notice Package</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Draft Ready</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Approve Counter-Letter citing indemnity waiver 4(a) directly to Oberoi Corporate Legal &amp; GM Hospitality.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm pt-0.5">
+<button class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" id="signSendBtn">
+<span class="material-symbols-outlined text-[17px]">draw</span>
+<span>Sign &amp; Send Notice</span>
+</button>
+<button aria-label="Review Full PDF" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[19px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">account_balance</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Smart Escrow Optimization</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold uppercase tracking-wider">Zero Slippage</span>
+</div>
+<div class="flex items-center gap-space-md p-3 rounded-xl bg-surface-container">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">savings</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-baseline gap-1">
+<span class="font-currency-numeral text-currency-numeral font-bold text-primary">₹2,10,000</span>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Reallocated</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              +6,000 Calcutta Mogra strands &amp; L-Acoustics arrays
+            </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface">
+<div class="p-2.5 rounded-xl bg-surface-container-high flex flex-col gap-0.5">
+<span class="font-label-sm text-[11px] text-outline">Floral Enhancement</span>
+<span class="font-currency-numeral text-sm font-semibold text-on-surface">₹1,15,000</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Mandap Fragrance Veil</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high flex flex-col gap-0.5">
+<span class="font-label-sm text-[11px] text-outline">Sufi Acoustic Arrays</span>
+<span class="font-currency-numeral text-sm font-semibold text-on-surface">₹95,000</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Weatherproof Delay Stack</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-1 text-on-surface-variant font-body-sm text-xs">
+<span>Net Escrow Delta: <strong class="text-on-surface">₹0.00</strong></span>
+<span class="flex items-center gap-1 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[14px]">lock_reset</span> Escrow Balanced
+          </span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-md hover:bg-on-secondary-fixed-variant active:scale-[0.98] transition-all" id="lockEscrowBtn">
+<span class="material-symbols-outlined text-[17px]">lock</span>
+<span>Execute Rebalance &amp; Lock Escrow</span>
+</button>
+</div>
+<div class="rounded-2xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#25D366] text-[18px]">chat</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Captains WhatsApp Dispatch</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline font-medium">14 Coordinators</span>
+</div>
+<div class="p-3.5 rounded-xl bg-[#e7f5dd]/70 text-on-surface flex flex-col gap-2 shadow-inner">
+<div class="flex items-center justify-between text-[11px] font-label-sm text-tertiary">
+<span class="font-semibold uppercase tracking-wider">Draft Preview • Bilingual Dispatch</span>
+<span>Auto-scheduled</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            “सादर प्रणाम! Kapoor-Singhania Ceremonial Update: Venue generator contingency successfully verified without budget disruption. Sangeet Sufi acoustic delays and fresh Calcutta Mogra decor expansions are locked. Timelines remain on schedule for 4:00 PM setup.”
+          </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[11px] text-outline">Target: Family Core + Pandit Ji Liaison</span>
+<span class="font-label-sm text-[11px] text-secondary font-bold">14 / 14 Available</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 flex items-center justify-center gap-1.5 px-4 py-2 rounded-full bg-surface-container-highest text-on-surface hover:bg-surface-variant font-label-md text-label-md active:scale-95 transition-all" id="dispatchBtn">
+<span class="material-symbols-outlined text-[16px] text-secondary">send</span>
+<span>Broadcast Now</span>
+</button>
+<button class="px-3 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-xs hover:text-on-surface transition-colors">
+            Edit Copy
+          </button>
+</div>
+</div>
+</div>
+</div>
+<div class="sticky bottom-0 -mx-margin-mobile px-margin-mobile pt-2 pb-1 bg-surface/95 backdrop-blur-md z-40">
+<div class="rounded-2xl bg-surface-container-high p-2 shadow-lg flex flex-col gap-1.5">
+<div class="flex items-center gap-2 px-1">
+<button aria-label="Attach Contract or Rider" class="w-9 h-9 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface flex items-center justify-center shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<div class="flex-1 flex items-center bg-surface-container-lowest rounded-full px-3 py-1.5 shadow-inner">
+<input class="w-full bg-transparent text-on-surface placeholder:text-outline focus:outline-none font-body-sm text-body-sm min-w-0" placeholder="Ask Gemini about riders, contracts, budgets..." type="text"/>
+</div>
+<button aria-label="Voice Input" class="w-9 h-9 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-secondary flex items-center justify-center shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button aria-label="Execute prompt" class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-95 hover:bg-primary-container transition-all">
+<span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-2 py-0.5 text-outline text-[11px] font-label-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">shield</span>
+<span>256-Bit Bank-Grade Escrow &amp; Contract Encryption Active</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const signBtn = document.getElementById('signSendBtn');
+    if (signBtn) {
+      signBtn.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[17px] animate-spin">refresh</span><span>Transmitting Notice...</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span class="material-symbols-outlined text-[17px] text-tertiary-fixed">check_circle</span><span>Notice Dispatched to Oberoi GM</span>';
+          this.classList.remove('bg-primary');
+          this.classList.add('bg-tertiary');
+        }, 1100);
+      });
+    }
+
+    const lockBtn = document.getElementById('lockEscrowBtn');
+    if (lockBtn) {
+      lockBtn.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[17px]">lock</span><span>Escrow Ledger Sealed (₹48,00,000)</span>';
+        this.classList.remove('bg-secondary');
+        this.classList.add('bg-tertiary');
+      });
+    }
+
+    const dispatchBtn = document.getElementById('dispatchBtn');
+    if (dispatchBtn) {
+      dispatchBtn.addEventListener('click', function() {
+        this.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">done</span><span>Dispatched to 14 Captains</span>';
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(40,37,34,0.04)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="command" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Command</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm mt-0.5">Ledger</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="timelines" href="#"><span class="material-symbols-outlined text-[22px]">schedule</span><span class="font-label-sm text-label-sm mt-0.5">Timelines</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm mt-0.5">Vendors</span></a><a aria-current="page" class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 transition-colors text-primary font-bold" data-path="copilot" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-primary text-on-primary font-label-sm text-[9px] leading-tight font-bold">AI</span></div><span class="font-label-sm text-label-sm mt-0.5">Copilot</span></a></div></nav></body></html>

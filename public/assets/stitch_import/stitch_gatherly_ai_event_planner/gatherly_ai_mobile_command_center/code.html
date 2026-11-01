@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#e7f5dd", "primary-fixed": "#ffdad2", "surface-dim": "#e0d9d4", "tertiary-fixed-dim": "#bdcbb4", "on-background": "#1e1b18", "surface-container-highest": "#e8e1dc", "on-surface-variant": "#57423d", "on-tertiary-fixed": "#141e10", "surface-container-lowest": "#ffffff", "surface-tint": "#a43c25", "inverse-surface": "#33302d", "on-error-container": "#93000a", "error-container": "#ffdad6", "on-primary-fixed-variant": "#842510", "inverse-primary": "#ffb4a3", "surface-variant": "#e8e1dc", "on-tertiary-fixed-variant": "#3e4a39", "primary-fixed-dim": "#ffb4a3", "secondary-fixed": "#ffd9e1", "secondary-fixed-dim": "#f1b7c5", "tertiary": "#4c5946", "on-surface": "#1e1b18", "primary-container": "#b84b32", "surface-container-high": "#eee7e2", "secondary": "#7f525d", "secondary-container": "#ffc5d3", "background": "#fff8f4", "outline-variant": "#dec0b9", "on-tertiary": "#ffffff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#643b46", "on-primary-fixed": "#3d0600", "inverse-on-surface": "#f7efea", "on-secondary": "#ffffff", "on-primary": "#ffffff", "tertiary-fixed": "#d9e7cf", "outline": "#8a716c", "on-primary-container": "#ffedea", "on-secondary-container": "#7b4f5a", "surface-container-low": "#faf2ed", "surface-container": "#f4ece7", "tertiary-container": "#65715e", "surface-bright": "#fff8f4", "error": "#ba1a1a", "on-secondary-fixed": "#32101b", "primary": "#98341d", "surface": "#fff8f4" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem", "space-md": "1rem", "gutter-sm": "1rem", "margin": "3rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "display-hero": ["Newsreader"], "display-hero-mobile": ["Newsreader"], "headline-lg-mobile": ["Newsreader"], "label-sm": ["Manrope"], "currency-numeral": ["Manrope"], "label-md": ["Manrope"], "title-lg": ["Manrope"], "headline-sm": ["Newsreader"], "title-md": ["Manrope"], "headline-lg": ["Newsreader"], "body-sm": ["Manrope"], "headline-md": ["Newsreader"], "body-lg": ["Manrope"], "body-md": ["Manrope"] }, "fontSize": { "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "currency-numeral": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(40,37,34,0.03)] pt-safe"><div class="h-20 px-margin-mobile flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-baseline gap-space-sm"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-normal">Gatherly</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">AI</span></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-low shadow-[0_1px_4px_rgba(40,37,34,0.03)]"><span class="font-currency-numeral text-xs text-primary font-semibold">₹</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">INR</span></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="flex items-center justify-between"><button class="group flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-[0.98] transition-all max-w-[260px]"><span class="material-symbols-outlined text-secondary text-[16px]">celebration</span><span class="font-label-md text-label-md truncate text-on-surface font-medium">Kapoor &amp; Singhania Imperial • Udaipur</span><span class="material-symbols-outlined text-outline text-[16px] group-hover:translate-y-0.5 transition-transform">unfold_more</span></button><span class="font-label-sm text-label-sm text-outline-variant font-medium tracking-wide uppercase">Command</span></div></div></header><main class="flex-1 flex flex-col relative w-full px-margin-mobile pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-lg select-none">
+<!-- Top Greeting & Context Ribbon -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Palace Ground Command</span>
+</div>
+<div class="px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">hourglass_top</span>
+<span>T-minus 14 Days</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+        Namaste, <span class="font-headline-md italic font-normal text-primary">Avantika</span>
+</h1>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Udaipur, 27°C</span>
+</div>
+</div>
+<!-- Hero Celebration Visual Card -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface-container-low group">
+<!-- Visual Image with Rich Scrim -->
+<div class="w-full h-80 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="Magnificent twilight wedding procession in an ornate Rajasthani palace courtyard in Udaipur. Bride and groom in imperial deep burgundy and gold velvet lehenga and sherwani walking down an aisle strewn with marigold and red rose petals. Surrounding reflecting pool adorned with floating oil diyas, towering carved marble jharokhas, glistening crystal chandeliers suspended from stone archways, and warm ambient candlelight under a royal twilight blue sky. Editorial luxury aesthetic, opulent warm ivory and terracotta accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwKEi15if6Hg16Bi95rmiRORQO-0dW56JiDw0jSGd9fkbr2It1bA1pYSf9CxV1vme2Q2RBkBgBGZ55wpWqJSExc_zNwDp443vlJTcotroB_9fkgrXu_1frOY9tbe3AtyX8izCCDBRgPJ_8BXM73Sz7BjJndYTIXBCRs0GmUh8veP5hbR13IELBCo8ThvIQIUDY5dEdoZTGB-NPjblOOcRyV03rcT3loI27FStb_1s')">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/20 to-transparent mix-blend-overlay"></div>
+</div>
+<!-- Floating Top Badges -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-inverse-surface/75 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm tracking-wide shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        Live Flagship • 3-Day Wedding
+      </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm font-bold shadow-sm">
+        Zenith Tier
+      </span>
+</div>
+<!-- Hero Content Overlay Bottom -->
+<div class="absolute bottom-0 inset-x-0 p-4 flex flex-col gap-3 text-inverse-on-surface">
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed opacity-90">Jagmandir Island Palace</p>
+<h2 class="font-headline-sm text-headline-sm text-inverse-on-surface font-medium leading-tight">
+          Kapoor &amp; Singhania Imperial
+        </h2>
+</div>
+<!-- Quick Pill Strip inside Hero -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-inverse-surface/60 backdrop-blur-md text-inverse-on-surface shrink-0">
+<span class="font-currency-numeral text-xs text-primary-fixed">₹</span>
+<span class="font-label-md text-label-md font-semibold text-inverse-on-surface">1.20 Cr</span>
+<span class="font-body-sm text-body-sm text-surface-dim font-normal">Cap</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-inverse-surface/60 backdrop-blur-md text-inverse-on-surface shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary-fixed">diversity_1</span>
+<span class="font-label-md text-label-md font-semibold text-inverse-on-surface">320 RSVP</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-inverse-surface/60 backdrop-blur-md text-inverse-on-surface shrink-0">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">wb_twilight</span>
+<span class="font-label-md text-label-md font-semibold text-inverse-on-surface">18:14 IST Muhurat</span>
+</div>
+</div>
+<!-- Primary Action CTA -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md font-semibold shadow-md active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+          Call Sheet &amp; Ground Briefing
+        </button>
+<button aria-label="Quick audio dispatch" class="w-11 h-11 flex items-center justify-center rounded-full bg-inverse-surface/75 backdrop-blur-md text-inverse-on-surface hover:bg-inverse-surface active:scale-95 transition-all shadow-md">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Real-time Muhurat Countdown Callout -->
+<div class="p-4 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">routine</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline font-bold">Next Celestial Window</span>
+<p class="font-title-md text-title-md text-on-surface leading-tight">18:14 IST • Sunset Pheras</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-numeral text-currency-numeral text-primary font-bold tracking-tight" id="muhurat-timer">04h 28m 12s</span>
+<p class="font-body-sm text-body-sm text-outline-variant">Auspicious Lagna</p>
+</div>
+</div>
+<!-- Checklist items inside snapshot -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container">
+<span class="material-symbols-outlined text-tertiary text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate font-semibold">Smoke-Free Agni Kund</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Vedic fuel delivered</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">sync</span>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate font-semibold">Shehnai Ensemble</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Sound check 17:30</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Operational Metric Bento Strip (Horizontal Swipe) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Command Telemetry</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wide">4 LIVE STREAMS</span>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar -mx-margin-mobile px-margin-mobile pb-1">
+<!-- Stat Card 1: Escrow Liquidity -->
+<div class="min-w-[240px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline">Escrow Liquidity</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹3.45 Cr</span>
+</div>
+</div>
+<span class="p-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 84%"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Multi-Sig Secured</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">84% Locked</span>
+</div>
+</div>
+</div>
+<!-- Stat Card 2: Active Disbursements -->
+<div class="min-w-[240px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline">Disbursements</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">₹1.18 Cr</span>
+</div>
+</div>
+<span class="p-1.5 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check</span>
+<span class="font-body-sm text-body-sm">GST e-Invoices Auto-Reconciled</span>
+</div>
+</div>
+<!-- Stat Card 3: Royal Guests RSVP -->
+<div class="min-w-[240px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline">WhatsApp Concierge</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-currency-numeral text-currency-numeral text-on-surface font-semibold">1,420</span>
+<span class="font-body-sm text-body-sm text-outline">/ 1,650</span>
+</div>
+</div>
+<span class="p-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Suites Allocated</span>
+<span class="font-label-sm text-label-sm font-semibold text-secondary">86% Done</span>
+</div>
+</div>
+<!-- Stat Card 4: AI Copilot Rider Audits -->
+<div class="min-w-[240px] p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline">AI Rider Audits</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-currency-numeral text-currency-numeral text-primary font-semibold">14 Flagged</span>
+</div>
+</div>
+<span class="p-1.5 rounded-full bg-primary-fixed-dim text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="font-label-sm text-label-sm font-bold text-primary">₹4,85,000</span>
+<span class="font-body-sm text-body-sm">penalties saved</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Urgent Action Tray -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">crisis_alert</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Urgent Dispatch Tray</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">2 Requiring Avantika</span>
+</div>
+<!-- Action Card 1: Legal Dispute -->
+<div class="p-3.5 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-3 group active:bg-surface-container transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[19px]">gavel</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Oberoi Legal Counter-Notice</h3>
+<span class="px-1.5 py-0.2 rounded bg-error/10 text-error font-label-sm text-label-sm font-bold">17:00 IST</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              ₹2,10,000 unmetered generator surcharge contested via Copilot clause 18.b.
+            </p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-dim transition-colors">
+          Review Redline
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm active:scale-95 transition-all">
+          Sign &amp; Serve (AI Drafted)
+        </button>
+</div>
+</div>
+<!-- Action Card 2: Escrow Verification -->
+<div class="p-3.5 rounded-2xl bg-surface-container-low shadow-sm flex flex-col gap-3 group active:bg-surface-container transition-colors">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[19px]">photo_camera</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Stage 2 Mandap Milestone</h3>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">₹18.5L</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Structural truss load-in &amp; Rajnigandha garlands verified by drone scan.
+            </p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-dim transition-colors">
+          Telemetry Proofs
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold shadow-sm active:scale-95 transition-all">
+          Authorize Multi-Sig
+        </button>
+</div>
+</div>
+</div>
+<!-- Operational Flow Quick Access Grid -->
+<div class="flex flex-col gap-2.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold">Command Grid</span>
+<div class="grid grid-cols-4 gap-2">
+<!-- 1. Escrow Ledger -->
+<button class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low shadow-sm active:scale-95 transition-all text-center">
+<div class="w-11 h-11 rounded-full bg-primary-fixed/60 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Escrow Ledger</span>
+</button>
+<!-- 2. Vendor Riders -->
+<button class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low shadow-sm active:scale-95 transition-all text-center">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed/60 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Vendor Riders</span>
+</button>
+<!-- 3. Broadcast Bot -->
+<button class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low shadow-sm active:scale-95 transition-all text-center">
+<div class="w-11 h-11 rounded-full bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">podcasts</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Guest Comm</span>
+</button>
+<!-- 4. Ground Telemetry -->
+<button class="flex flex-col items-center gap-1.5 p-3 rounded-2xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low shadow-sm active:scale-95 transition-all text-center">
+<div class="w-11 h-11 rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[22px]">satellite_alt</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Telemetry</span>
+</button>
+</div>
+</div>
+<!-- Venue Environmental Insight Card -->
+<div class="p-4 rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">castle</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Island Logistics Buffer</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">12 JETTY CRAFTS ACTIVE</span>
+</div>
+<!-- Small visual thumbnail & status -->
+<div class="flex items-center gap-3">
+<img class="w-16 h-16 rounded-xl object-cover shrink-0 shadow-sm" data-alt="Lake Pichola Udaipur at golden hour with vintage ceremonial wooden boats ferrying guests toward the luminous Jagmandir palace illuminated by thousands of floating lamps." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6m50Cgln72nGxkszTKKiHbXj9RF4idE1yDu-ETJ9NCTY84XVIYlJPVBpKkWsxThj9Lmuhl9UWkiHgJK6djXOUOY6d8kd9pgezm5fyEyH11WmLB7DSuhf7V06sZWnzY5IRhhSEwRv0JOkNZsVyZTGdgxKlyykqJd_zTyxJAf4exwTykUWJJHRR-spFIKs5kO-S2HAsMAuRaYUfuCqIF-bk_TPtSYM3Vuao6oV2VI"/>
+<div class="flex-1 min-w-0">
+<p class="font-body-md text-body-md text-on-surface font-medium truncate">Lake Pichola Water Transfer</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Lake level: Optimal • Turnaround 6.5 mins</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+            Baggage Tagged 100%
+          </span>
+<span class="font-body-sm text-body-sm text-outline">Wind: 8 kt NE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subtle Script for Dynamic Micro-interaction -->
+<script>
+    (function initCommandCenter() {
+      // Micro-ticker for sunset muhurat countdown
+      let totalSeconds = 4 * 3600 + 28 * 60 + 12;
+      const timerElement = document.getElementById('muhurat-timer');
+      
+      if (timerElement) {
+        setInterval(() => {
+          if (totalSeconds > 0) {
+            totalSeconds--;
+            const h = Math.floor(totalSeconds / 3600);
+            const m = Math.floor((totalSeconds % 3600) / 60);
+            const s = totalSeconds % 60;
+            timerElement.textContent = 
+              `${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
+          }
+        }, 1000);
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(40,37,34,0.04)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 transition-colors text-primary font-bold" data-path="command" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Command</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="ledger" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm mt-0.5">Ledger</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="timelines" href="#"><span class="material-symbols-outlined text-[22px]">schedule</span><span class="font-label-sm text-label-sm mt-0.5">Timelines</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendors" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm mt-0.5">Vendors</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-secondary hover:text-on-surface transition-colors" data-path="copilot" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-primary text-on-primary font-label-sm text-[9px] leading-tight font-bold">AI</span></div><span class="font-label-sm text-label-sm mt-0.5">Copilot</span></a></div></nav></body></html>

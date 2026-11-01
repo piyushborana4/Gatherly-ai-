@@ -1,0 +1,6 @@
+{
+  "name": "Gatherly AI",
+  "description": "Every Occasion. Thoughtfully Planned. Intelligent full-stack event planning platform for weddings, birthdays, festivals, and community gatherings with Gemini AI planning, deterministic budget ledger, timeline automation, vendor directory, guest RSVP management, and real-time collaboration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

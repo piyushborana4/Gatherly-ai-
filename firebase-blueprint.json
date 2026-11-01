@@ -1,0 +1,743 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Authenticated user profile and regional event planning preferences.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Auth UID matching document ID.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User full name or display name.",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Verified user email address (PII isolated to owner).",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "preferredCurrency": {
+          "type": "string",
+          "description": "Default currency code for new events.",
+          "enum": ["INR", "USD", "EUR", "GBP", "AED", "SGD"],
+          "maxLength": 10
+        },
+        "preferredLocale": {
+          "type": "string",
+          "description": "Default formatting locale.",
+          "enum": ["en-IN", "en-US", "en-GB"],
+          "maxLength": 20
+        },
+        "defaultCity": {
+          "type": "string",
+          "description": "Preferred primary city for event planning.",
+          "maxLength": 100
+        },
+        "dietaryDefault": {
+          "type": "string",
+          "description": "Default dietary preference.",
+          "maxLength": 100
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp."
+        }
+      },
+      "required": [
+        "uid",
+        "displayName",
+        "email",
+        "preferredCurrency",
+        "preferredLocale",
+        "defaultCity",
+        "dietaryDefault",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "EventPlan": {
+      "title": "EventPlan",
+      "description": "Core event document containing event parameters and structured AI planning narrative.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "category": {
+          "type": "string",
+          "enum": ["wedding", "birthday", "community", "college", "festival", "custom"],
+          "maxLength": 32
+        },
+        "startDate": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 32
+        },
+        "endDate": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 32
+        },
+        "city": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "venuePreference": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "guestCount": {
+          "type": "number",
+          "description": "Estimated number of guests."
+        },
+        "totalBudget": {
+          "type": "number",
+          "description": "Total target budget in selected currency."
+        },
+        "currency": {
+          "type": "string",
+          "enum": ["INR", "USD", "EUR", "GBP", "AED", "SGD"],
+          "maxLength": 10
+        },
+        "styleTheme": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "dietaryRequirements": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "culturalPreferences": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "accessibilityRequirements": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "additionalInstructions": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "status": {
+          "type": "string",
+          "enum": ["draft", "active", "completed", "archived"],
+          "maxLength": 32
+        },
+        "aiOverview": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiStrategy": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiThemeIdeas": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiFoodSuggestions": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiEntertainmentIdeas": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiRiskPlan": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiGuestRecommendations": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "aiReminders": {
+          "type": "string",
+          "maxLength": 2500
+        },
+        "isDemo": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "ownerId",
+        "ownerName",
+        "name",
+        "category",
+        "startDate",
+        "endDate",
+        "city",
+        "venuePreference",
+        "guestCount",
+        "totalBudget",
+        "currency",
+        "styleTheme",
+        "dietaryRequirements",
+        "culturalPreferences",
+        "accessibilityRequirements",
+        "additionalInstructions",
+        "status",
+        "aiOverview",
+        "aiStrategy",
+        "aiThemeIdeas",
+        "aiFoodSuggestions",
+        "aiEntertainmentIdeas",
+        "aiRiskPlan",
+        "aiGuestRecommendations",
+        "aiReminders",
+        "isDemo",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "ExpenseItem": {
+      "title": "ExpenseItem",
+      "description": "Budget allocation and actual expense ledger line item.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "eventId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Venue",
+            "Catering",
+            "Decoration",
+            "Photography",
+            "Entertainment",
+            "Clothing",
+            "Transportation",
+            "Accommodation",
+            "Invitations",
+            "Miscellaneous"
+          ],
+          "maxLength": 40
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "allocatedAmount": {
+          "type": "number"
+        },
+        "plannedAmount": {
+          "type": "number"
+        },
+        "actualAmount": {
+          "type": "number"
+        },
+        "depositPaid": {
+          "type": "number"
+        },
+        "paymentStatus": {
+          "type": "string",
+          "enum": ["planned", "deposit_paid", "partially_paid", "paid", "cancelled"],
+          "maxLength": 32
+        },
+        "vendorName": {
+          "type": "string",
+          "maxLength": 140
+        },
+        "isAiEstimate": {
+          "type": "boolean"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "eventId",
+        "ownerId",
+        "category",
+        "title",
+        "allocatedAmount",
+        "plannedAmount",
+        "actualAmount",
+        "depositPaid",
+        "paymentStatus",
+        "vendorName",
+        "isAiEstimate",
+        "notes",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "TimelineTask": {
+      "title": "TimelineTask",
+      "description": "Milestone task in the event timeline with priority, dependency, and owner.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "eventId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 600
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "6+ Months Out",
+            "3-5 Months Out",
+            "1-2 Months Out",
+            "2-3 Weeks Out",
+            "Event Week",
+            "Event Day",
+            "Post-Event"
+          ],
+          "maxLength": 40
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low"],
+          "maxLength": 20
+        },
+        "dueDate": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 32
+        },
+        "status": {
+          "type": "string",
+          "enum": ["todo", "in_progress", "completed", "blocked"],
+          "maxLength": 24
+        },
+        "assigneeName": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "dependsOnTaskId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "reminderEnabled": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "eventId",
+        "ownerId",
+        "title",
+        "description",
+        "stage",
+        "priority",
+        "dueDate",
+        "status",
+        "assigneeName",
+        "dependsOnTaskId",
+        "reminderEnabled",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "VendorRecord": {
+      "title": "VendorRecord",
+      "description": "Shortlisted or booked event vendor with quotation, booking status, and source provenance.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "eventId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Venues",
+            "Caterers",
+            "Photographers",
+            "Decorators",
+            "Makeup Artists",
+            "DJs & Entertainers",
+            "Transportation",
+            "Florists",
+            "Invitation Designers"
+          ],
+          "maxLength": 40
+        },
+        "city": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": ["ai_suggestion", "demo_sample", "user_entered", "search_grounded"],
+          "maxLength": 32
+        },
+        "contactInfo": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "estimatedCost": {
+          "type": "number"
+        },
+        "quotedAmount": {
+          "type": "number"
+        },
+        "depositPaid": {
+          "type": "number"
+        },
+        "bookingStatus": {
+          "type": "string",
+          "enum": ["discovered", "shortlisted", "contacted", "quoted", "booked", "declined"],
+          "maxLength": 32
+        },
+        "paymentStatus": {
+          "type": "string",
+          "enum": ["unpaid", "deposit_paid", "paid"],
+          "maxLength": 32
+        },
+        "userRating": {
+          "type": "number"
+        },
+        "priorityLevel": {
+          "type": "string",
+          "enum": ["immediate", "high", "standard", "optional"],
+          "maxLength": 24
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 600
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "eventId",
+        "ownerId",
+        "name",
+        "category",
+        "city",
+        "sourceType",
+        "contactInfo",
+        "estimatedCost",
+        "quotedAmount",
+        "depositPaid",
+        "bookingStatus",
+        "paymentStatus",
+        "userRating",
+        "priorityLevel",
+        "notes",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "GuestRecord": {
+      "title": "GuestRecord",
+      "description": "Event guest with RSVP status, dietary needs, and plus-one count.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "eventId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "fullName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "groupName": {
+          "type": "string",
+          "enum": [
+            "Bride Family",
+            "Groom Family",
+            "Close Friends",
+            "Colleagues",
+            "VIP & Elders",
+            "Community & Neighbors",
+            "General"
+          ],
+          "maxLength": 40
+        },
+        "contactPhoneOrEmail": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "rsvpStatus": {
+          "type": "string",
+          "enum": ["invited", "confirmed", "declined", "tentative", "not_sent"],
+          "maxLength": 24
+        },
+        "invitationSent": {
+          "type": "boolean"
+        },
+        "dietaryPreference": {
+          "type": "string",
+          "enum": [
+            "Vegetarian",
+            "Jain Vegetarian",
+            "Vegan",
+            "Non-Vegetarian",
+            "Gluten-Free",
+            "No Preference"
+          ],
+          "maxLength": 40
+        },
+        "plusOneCount": {
+          "type": "number"
+        },
+        "specialNotes": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "eventId",
+        "ownerId",
+        "fullName",
+        "groupName",
+        "contactPhoneOrEmail",
+        "rsvpStatus",
+        "invitationSent",
+        "dietaryPreference",
+        "plusOneCount",
+        "specialNotes",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "CollaboratorRecord": {
+      "title": "CollaboratorRecord",
+      "description": "Collaborator membership grant under an event.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "eventId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "ownerId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "role": {
+          "type": "string",
+          "enum": ["editor", "viewer"],
+          "maxLength": 20
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "revoked"],
+          "maxLength": 20
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "userId",
+        "eventId",
+        "ownerId",
+        "email",
+        "displayName",
+        "role",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Private user profile and regional preferences, strictly isolated to owner."
+    },
+    "/events/{eventId}": {
+      "schema": { "$ref": "#/entities/EventPlan" },
+      "description": "Master event plan document owned by ownerId and accessible to authorized collaborators."
+    },
+    "/events/{eventId}/expenses/{expenseId}": {
+      "schema": { "$ref": "#/entities/ExpenseItem" },
+      "description": "Budget allocations and actual expenses for an event."
+    },
+    "/events/{eventId}/tasks/{taskId}": {
+      "schema": { "$ref": "#/entities/TimelineTask" },
+      "description": "Timeline milestones and actionable tasks for an event."
+    },
+    "/events/{eventId}/vendors/{vendorId}": {
+      "schema": { "$ref": "#/entities/VendorRecord" },
+      "description": "Shortlisted and booked vendors for an event."
+    },
+    "/events/{eventId}/guests/{guestId}": {
+      "schema": { "$ref": "#/entities/GuestRecord" },
+      "description": "Guest list and RSVP records for an event (PII protected)."
+    },
+    "/events/{eventId}/collaborators/{collabUserId}": {
+      "schema": { "$ref": "#/entities/CollaboratorRecord" },
+      "description": "Collaborator RBAC permissions for an event."
+    }
+  }
+}
